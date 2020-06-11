@@ -22,7 +22,10 @@ checkです<br>
            <th>{{ $shop->id}}</th>
            <td><a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">{{ $shop->shop_name}}</a></td>
            <td>{{$shop->address }}</td>
-           <td><a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> / <a href="#">削除</a></td>
+           <td>
+             <a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> 
+           / 
+           <a href="{{ route('mypage.delete') . '?id=' . strval($shop->id ) }}">削除</a></td>
          </tr>
       @endforeach   
     </tbody>

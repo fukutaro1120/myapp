@@ -186,9 +186,16 @@ class MyPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
         // マイページのお店の削除
+        // 該当するNews Modelを取得
+      $shops = Shop::find($request->id);
+
+      // 削除する
+      $shops->delete();
+      
+      return redirect('mypage/check');
 
 
     }

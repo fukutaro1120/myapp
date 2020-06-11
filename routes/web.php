@@ -28,7 +28,8 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('show', 'MyPageController@show')->name('mypage.show');
 
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
-    Route::post('destory', 'MyPageController@destory')->name('mypage.destory');
+
+    Route::get('delete', 'MyPageController@delete')->name('mypage.delete');
     
     
     // 登録店舗一覧と更新
