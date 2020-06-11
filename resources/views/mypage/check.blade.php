@@ -13,18 +13,18 @@ checkです<br>
               <th scope="col">No</th>
               <th scope="col">店舗名</th>
               <th scope="col">住所</th>
-              <th scope="col">ジャンル</th>
               <th scope="col">アクション</th>
           </tr>
       </thead>
     <tbody>
+      @foreach($shops as $shop)
          <tr>
-           <th>1</th>
-           <td><a href="detail.html">海鮮居酒屋 里</a></td>
-           <td>東京都大田区蒲田</td>
-           <td>和食</td>
-           <td><a href="{{ route('mypage.update') }}">編集</a> / <a href="#">削除</a></td>
+           <th>{{ $shop->id}}</th>
+           <td><a href="#">{{ $shop->shop_name}}</a></td>
+           <td>{{$shop->address }}</td>
+           <td><a href="{{ route('mypage.update') . '?id=' . strval($shop->id)}}">編集</a> / <a href="#">削除</a></td>
          </tr>
+      @endforeach   
     </tbody>
   </table>
   </div>

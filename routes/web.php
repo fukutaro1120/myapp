@@ -24,14 +24,17 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::post('create', 'MyPageController@create')->name('mypage.create');
    
     Route::post('store', 'MyPageController@store')->name('mypage.store');
+
     Route::get('show', 'MyPageController@show')->name('mypage.show');
+
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
-    Route::get('update', 'MyPageController@update')->name('mypage.update');
     Route::post('destory', 'MyPageController@destory')->name('mypage.destory');
-    // show,edit,update,destroyはidを入力
     
-    // 登録店舗一覧
+    
+    // 登録店舗一覧と更新
     Route::get('check', 'MyPageController@check')->name('mypage.check');
+    Route::get('update', 'MyPageController@list')->name('mypage.list');
+    Route::post('update', 'MyPageController@update')->name('mypage.update');
 
     // リクエストページ
     Route::get('request', 'mypageController@request')->name('mypage.request');
