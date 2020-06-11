@@ -11,7 +11,7 @@ editです<br>
         <div class="row">
             <div class="col-6">
                 <div class="container m-5">
-                    <h2 class="h4 text-muted">居酒屋</h2>
+                    <!-- <h2 class="h4 text-muted">居酒屋</h2> -->
                     <h1 class="display-4">{{ $shop->shop_name }}</h1>
                     
                 </div>

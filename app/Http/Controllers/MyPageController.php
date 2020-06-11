@@ -85,7 +85,7 @@ class MyPageController extends Controller
     {
         // 会員別のショップのデータ一覧を取得して、それを表示
       $shops = DB::table('shops')
-       ->select('shop_name','category','image_path')
+       ->select('id','shop_name','category','image_path')
        ->get();
 
         // dd($shops);
