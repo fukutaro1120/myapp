@@ -4,13 +4,15 @@
 
 editです<br>
 マイページ登録店舗の詳細画面を表示
+
+
 <div class="container-fulid">
     <div class="jumbotron jumbotron-fluid px-0">
         <div class="row">
             <div class="col-6">
                 <div class="container m-5">
                     <h2 class="h4 text-muted">居酒屋</h2>
-                    <h1 class="display-4">海鮮居酒屋 里</h1>
+                    <h1 class="display-4">{{ $shop->shop_name }}</h1>
                     
                 </div>
             </div>
@@ -46,23 +48,24 @@ editです<br>
         <div class="container pb-4">
           <dl class="row">
             <dt class="col-sm-3">店舗名</dt>
-            <dd class="col-sm-9">海鮮居酒屋 里</dd>
+            <dd class="col-sm-9">{{ $shop->shop_name}}</dd>
             <dt class="col-sm-3">住所</dt>
-            <dd class="col-sm-9">東京都大田区蒲田</dd>
+            <dd class="col-sm-9">{{ $shop->address}}</dd>
             <dt class="col-sm-3">ジャンル</dt>
-            <dd class="col-sm-9">和食</dd>            
+            <dd class="col-sm-9">{{ $shop->category}}</dd>            
             <dt class="col-sm-3">おすすめ料理</dt>
-            <dd class="col-sm-9">お刺身</dd>
+            <dd class="col-sm-9">{{ $shop->recommend}}</dd>
             <dt class="col-sm-3">お店の作り</dt>
-            <dd class="col-sm-9">2フロア （１階はカウンター、2階はテーブル席）</dd>
-            <dt class="col-sm-3">コメント</dt>
-            <dd class="col-sm-9">リーズナブルに新鮮なお刺身が食べられます。</dd>
+            <dd class="col-sm-9">{{ $shop->interior}}</dd>
+            <!-- <dt class="col-sm-3">コメント</dt>
+            <dd class="col-sm-9"></dd>
             <dt class="col-sm-3">店のURL</dt>
-            <dd class="col-sm-9"><a href="https://tabelog.com/tokyo/A1315/A131503/13163362/">https://tabelog.com/tokyo/A1315/A131503/13163362/</a></dd>
+            <dd class="col-sm-9"><a href="https://tabelog.com/tokyo/A1315/A131503/13163362/">https://tabelog.com/tokyo/A1315/A131503/13163362/</a></dd> -->
             
           </dl>
         </div>
   </div>
+
 
   <div class="container">
     <div class="row">

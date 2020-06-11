@@ -123,11 +123,14 @@ class MyPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Request $request)
     {
         //マイページに登録している店舗の詳細へ表示
-        return view('mypage.edit');
-        
+        $shops = Shop::find($request->id);
+
+        // dd($shops);
+
+        return view('mypage.edit',['shop' => $shops]);
     }
     
     public function request()
@@ -155,7 +158,7 @@ class MyPageController extends Controller
     public function update(Request $request)
     {
         //編集した内容の更新とDBへの保存
-     
+
         $shop = Shop::find($request->id);
         $shop_date = $request->all();
 

@@ -20,9 +20,9 @@ checkです<br>
       @foreach($shops as $shop)
          <tr>
            <th>{{ $shop->id}}</th>
-           <td><a href="#">{{ $shop->shop_name}}</a></td>
+           <td><a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">{{ $shop->shop_name}}</a></td>
            <td>{{$shop->address }}</td>
-           <td><a href="{{ route('mypage.update') . '?id=' . strval($shop->id)}}">編集</a> / <a href="#">削除</a></td>
+           <td><a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> / <a href="#">削除</a></td>
          </tr>
       @endforeach   
     </tbody>
