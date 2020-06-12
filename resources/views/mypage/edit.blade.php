@@ -10,23 +10,36 @@ editです<br>
     <div class="jumbotron jumbotron-fluid px-0">
         <div class="row">
             <div class="col-6">
-                <div class="container m-5">
-                    <!-- <h2 class="h4 text-muted">居酒屋</h2> -->
-                    <h1 class="display-4">{{ $shop->shop_name }}</h1>
-                    
+                <div class="container m-5">      
+                    <dl class="row">
+                          <dt class="col-sm-3 mb-4 h3">店舗名:</dt>
+                          <dd class="col-sm-9 mb-4 h4">{{ $shop->shop_name}}</dd>
+                          <dt class="col-sm-3 mb-4 h3">住所:</dt>
+                          <dd class="col-sm-9 mb-4 h4">{{ $shop->address}}</dd>
+                          <dt class="col-sm-3 mb-4 h3">ジャンル:</dt>
+                          <dd class="col-sm-9 mb-4 h4">{{ $shop->category}}</dd>            
+                          <dt class="col-sm-3 mb-4 h3">おすすめ料理:</dt>
+                          <dd class="col-sm-9 mb-4 h4">{{ $shop->recommend}}</dd>
+                          <dt class="col-sm-3 mb-4 h3">お店の作り:</dt>
+                          <dd class="col-sm-9 mb-4 h4">{{ $shop->interior}}</dd>
+                          <!-- <dt class="col-sm-3">コメント</dt>
+                          <dd class="col-sm-9"></dd>
+                          <dt class="col-sm-3">店のURL</dt>
+                          <dd class="col-sm-9"><a href="https://tabelog.com/tokyo/A1315/A131503/13163362/">https://tabelog.com/tokyo/A1315/A131503/13163362/</a></dd> --> 
+                    </dl> 
                 </div>
             </div>
             <div class="col-6 ">             
               <div id="foo" class="carousel slide shadow" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="/storage/img/sato06.jpg" class="d-block w-80">
+                      <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid  ">
                     </div>
                     <div class="carousel-item">
-                      <img src="/storage/img/sato06.jpg" class="d-block w-80">
+                      <img src="/storage/img/sato06.jpg" class="img-fluid  ">
                     </div>
                     <div class="carousel-item">
-                      <img src="/storage/img/sato09.jpg" class="d-block w-80">
+                      <img src="/storage/img/sato09.jpg" class="img-fluid  ">
                     </div>
                         <a class="carousel-control-prev" href="#foo"data-slide="prev">
                           <span class="carousel-control-prev-icon"></span>
@@ -43,28 +56,9 @@ editです<br>
               </div> 
             </div>
           </div>
-        </div>
-
-        <div class="container pb-4">
-          <dl class="row">
-            <dt class="col-sm-3">店舗名</dt>
-            <dd class="col-sm-9">{{ $shop->shop_name}}</dd>
-            <dt class="col-sm-3">住所</dt>
-            <dd class="col-sm-9">{{ $shop->address}}</dd>
-            <dt class="col-sm-3">ジャンル</dt>
-            <dd class="col-sm-9">{{ $shop->category}}</dd>            
-            <dt class="col-sm-3">おすすめ料理</dt>
-            <dd class="col-sm-9">{{ $shop->recommend}}</dd>
-            <dt class="col-sm-3">お店の作り</dt>
-            <dd class="col-sm-9">{{ $shop->interior}}</dd>
-            <!-- <dt class="col-sm-3">コメント</dt>
-            <dd class="col-sm-9"></dd>
-            <dt class="col-sm-3">店のURL</dt>
-            <dd class="col-sm-9"><a href="https://tabelog.com/tokyo/A1315/A131503/13163362/">https://tabelog.com/tokyo/A1315/A131503/13163362/</a></dd> -->
-            
-          </dl>
-        </div>
+        </div>      
   </div>
+
 
 
   <div class="container">

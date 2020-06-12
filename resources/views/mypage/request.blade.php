@@ -40,7 +40,7 @@ requestです<br>
           <label for="exampleFormControlTextarea1">店のおすすめポイント</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-      </form>
+  
       
       <form>
         <div class="form-group">
@@ -53,13 +53,16 @@ requestです<br>
                       </a>
                     </div>
               </div>
+            </div>
+          </div>
+        </form>
+          
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 
-</form>
 
 
 @endsection
