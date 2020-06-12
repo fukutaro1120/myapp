@@ -17,10 +17,10 @@
 <!-- スライド -->
   <div class="container text-center">
           <!-- <h3 class="display-3">飲musubi</h3> -->
-          <p class="fade">人と酒</p>
-          <p class="fade">人と店</p>
-          <p class="fade">人と人</p>
-          <p class="fade">全てを結ぶ</p>
+          <h3 class="fade">人と酒</h3>
+          <h3 class="fade">人と店</h3>
+          <h3 class="fade">人と人</h3>
+          <h3 class="fade">全てを結ぶ</h3>
   </div> 
 
 
