@@ -19,16 +19,16 @@ createです<br>
 @endif
 
     <div class="container mt-3">
-        <div class="row">
-              <div class="col-sm-3">
-                店舗名
-              </div>
-              <div class="col-sm-9">
-                  <div class="form-group">
-                         <input class="form-control"type="text" name="shop_name" value="{{ old('shop_name') }}" >
-                  </div>
-               </div>
-        </div>    
+          <div class="row">
+                <div class="col-sm-3">
+                  店舗名
+                </div>
+                <div class="col-sm-7">
+                    <div class="form-group">
+                          <input class="form-control"type="text" name="shop_name" value="{{ old('shop_name') }}" >
+                    </div>
+                </div>
+          </div>    
       </div>
    
     <div class="container ">
@@ -36,7 +36,7 @@ createです<br>
               <div class="col-sm-3">
                 住所
               </div>
-              <div class="col-sm-9"> 
+              <div class="col-sm-7"> 
                   <div class="form-group">
                          <input class="form-control"type="text" name="address" value="{{ old('address') }}" >
                   </div>
@@ -48,7 +48,7 @@ createです<br>
               <div class="col-sm-3">
                 ジャンル
               </div>
-              <div class="col-sm-9"> 
+              <div class="col-sm-7"> 
                   <div class="form-group">
                          <input class="form-control"type="text" name="category" value="{{ old('category') }}" >
                   </div>
@@ -62,7 +62,7 @@ createです<br>
         <div class="col-sm-3">
             おすすめ料理
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-7">
             <!-- <form> -->
               <div class="form-group">
                <input class="form-control"type="text" name="recommend" value="{{ old('recommend') }}" >
@@ -77,7 +77,7 @@ createです<br>
         <div class="col-sm-3">
           お店の作り
           </div>
-        <div class="col-sm-9">
+        <div class="col-sm-7">
           <!-- <form> -->
             <div class="form-group">
               <input class="form-control"type="text" name="interior" value="{{ old('interior') }}" >
@@ -91,7 +91,7 @@ createです<br>
     <div class="container">
       <div class="form-group row">
         <label for="addImage" class="col-sm-3 col-form-label">画像</label>          
-        <div class="col-sm-9">
+        <div class="col-sm-7">
           <div class="custom-file">
             <input type="file" class="custom-file-input" name="image">
             <label class="custom-file-label" for="addImage"></label>  
