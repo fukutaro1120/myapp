@@ -11,7 +11,11 @@ requestです<br>
 
         <div class="form-group">
           <label for="exampleFormControlInput1">店舗名</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">住所</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">性別</label>
@@ -45,7 +49,7 @@ requestです<br>
                 <div class="col-md-10"></div>
                     <div class="col-md-2">
                       <a href="pro.html">
-                        <button type="button" class="btn btn-outline-primary">リクエストを送信する</button>
+                        <button type="button" class="btn btn-outline-primary">送信</button>
                       </a>
                     </div>
               </div>

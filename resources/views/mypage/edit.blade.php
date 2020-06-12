@@ -69,15 +69,15 @@ editです<br>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm8"></div>
+      <div class="col-md-4"></div>
           <div class="col-sm-2">
             <a href="pro.html">
-              <button type="button" class="btn btn-outline-primary">マイページに追加</button>
+              <button type="button" class="btn btn-outline-primary">マイページ追加</button>
             </a>
           </div>
-      <div class="col-sm-2">
-          <a href="pro.html">
-             <button type="button" class="btn btn-outline-primary">マイページから削除</button>
+      <div class="col-md-4">
+          <a href="{{ route('mypage.evaluation') . '?id=' . strval($shop->id) }}">
+             <button type="button" class="btn btn-outline-primary">評価入力</button>
           </a>
       </div>
     </div>

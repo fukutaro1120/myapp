@@ -139,9 +139,12 @@ class MyPageController extends Controller
     }
 
 
-    public function evaluation()
+    public function evaluation(Request $request)
     {
-        return view ('mypage.evaluation');
+        $shop = Shop::find($request->id);
+
+        return view('mypage.evaluation',['shop' =>$shop]);
+        
     }
 
 
