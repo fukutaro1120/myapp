@@ -9,7 +9,7 @@ showです<br>
 <div class="container">
   <div class="row">
       @foreach($shops as $shop)
-            <div class="card col-md-3 shadow mb-5 ">
+            <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
                 <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 ">
                   <div class="card-body">
 

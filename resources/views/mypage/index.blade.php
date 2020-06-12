@@ -14,13 +14,15 @@
       </div> 
   </div> 
             
-
+<!-- スライド -->
   <div class="container text-center">
-          <h3 class="display-3">飲musubi</h3>
-          <p class="lead">ここに説明</p>
-          <p class="lead">ここに説明</p>
-          <p class="lead">ここに説明</p>
+          <!-- <h3 class="display-3">飲musubi</h3> -->
+          <p class="fade">人と酒</p>
+          <p class="fade">人と店</p>
+          <p class="fade">人と人</p>
+          <p class="fade">全てを結ぶ</p>
   </div> 
+
 
   <footer class="footer mt-auto  py-3 bg-light">
       <div class="container text-center">
@@ -32,6 +34,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
+
+    <script src="{{ asset('js/index.js') }}" defer></script>
 
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 

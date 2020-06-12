@@ -11,6 +11,10 @@ class Shop extends Model
     public static $rules = array(
         'shop_name' => 'required',
         'address' => 'required',
+        'category' => 'required',
+        'recommend' => 'required',
+        'interior' => 'required',
+        
         
     );
 }

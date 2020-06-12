@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .jumbotron {
   background-image: url(/images/musubi.jpg?65cf2d4f77d4144eeb65bb8c0b4ea158);
   background-position: center;
@@ -13,4 +15,97 @@
   margin: auto;
   text-align: center;
 }
+
+#animation {
+  margin: 50px 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.fade:nth-child(1) {
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fade:nth-child(2) {
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fade:nth-child(3) {
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fade:nth-child(4) {
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  /*animetion-nameで設定した値を書く*/
+  0% {
+    opacity: 0;
+  }
+
+  /*アニメーション開始時は不透明度0%*/
+  100% {
+    opacity: 1;
+  }
+
+  /*アニメーション終了時は不透明度100%*/}
+
+@keyframes fadeIn {
+  /*animetion-nameで設定した値を書く*/
+  0% {
+    opacity: 0;
+  }
+
+  /*アニメーション開始時は不透明度0%*/
+  100% {
+    opacity: 1;
+  }
+
+  /*アニメーション終了時は不透明度100%*/}
 
