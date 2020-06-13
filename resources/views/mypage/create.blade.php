@@ -2,9 +2,6 @@
 
 @section('content')
 
-createです<br>
-運営のみ使用できるページ<br>
-店を新規登録できる
 
 <form action="{{ action('MyPageController@create') }}" method="post" enctype="multipart/form-data">
 @csrf
@@ -18,7 +15,7 @@ createです<br>
     </ul>
 @endif
 
-    <div class="container mt-3">
+    <div class="container mt-5">
           <div class="row">
                 <div class="col-sm-3">
                   店舗名

@@ -19,12 +19,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    
 </head>
 <body>
     <div id="app">
         
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container ml-0">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/storage/img/musubi.jpg" width="50" height="40" alt="" loading="lazy">
                     {{ config('app.name', 'Laravel') }}
@@ -37,16 +39,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('mypage.show') }}">おすすめ一覧</a>
+                            <a class="nav-link pl-5" href="{{ route('mypage.show') }}">おすすめ一覧</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('mypage.create') }}">店の新規登録</a>
+                            <a class="nav-link pl-5" href="{{ route('mypage.create') }}">店の新規登録</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('mypage.check') }}">登録店舗の更新</a>
+                            <a class="nav-link pl-5" href="{{ route('mypage.check') }}">登録店舗の更新</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('mypage.request') }}">リクエストを送る</a>
+                            <a class="nav-link pl-5" href="{{ route('mypage.request') }}">リクエストを送る</a>
                         </li>
                     </ul>
 

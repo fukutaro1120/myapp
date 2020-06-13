@@ -2,11 +2,9 @@
 
 @section('content')
 
-checkです<br>
-登録店舗一覧表示<br>
 
 
-  <div class="container pt-2">
+  <div class="container mt-5 pt-2">
     <table class="table table-hover">
       <thead>
          <tr>

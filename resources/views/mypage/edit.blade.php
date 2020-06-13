@@ -2,11 +2,8 @@
 
 @section('content')
 
-editです<br>
-マイページ登録店舗の詳細画面を表示
 
-
-<div class="container-fulid">
+<div class="container mt-5">
     <div class="jumbotron jumbotron-fluid px-0">
         <div class="row">
             <div class="col-6">

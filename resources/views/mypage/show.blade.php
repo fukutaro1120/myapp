@@ -2,11 +2,8 @@
 
 @section('content')
 
-showです<br>
-登録店舗一覧の表示
 
-
-<div class="container">
+<div class="container mt-5">
   <div class="row">
       @foreach($shops as $shop)
             <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
