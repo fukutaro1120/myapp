@@ -16,48 +16,72 @@ evaluationです<br>
               
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 my-0">
               <div class="form-group">
                 <label for="exampleFormControlSelect1">料理</label>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                <option>大ジョッキ</option>
-                <option>中ジョッキ</option>
-                <option>小ジョッキ</option>
+                  <option>選択してください</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>    
               </select>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 my-0">
               <div class="form-group">
                 <label for="exampleFormControlSelect1">ドリンク</label>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                <option>大ジョッキ</option>
-                <option>中ジョッキ</option>
-                <option>小ジョッキ</option>
+                  <option>選択してください</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
               </select>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container my-0">
         <div class="row">
             <div class="col-md-3">
               <div class="form-group">
                 <label for="exampleFormControlSelect1">雰囲気</label>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                <option>大ジョッキ</option>
-                <option>中ジョッキ</option>
-                <option>小ジョッキ</option>
+                <option>選択してください</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
               </select>
             </div>
         </div>

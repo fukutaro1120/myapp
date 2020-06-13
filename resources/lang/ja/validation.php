@@ -118,7 +118,8 @@ return [
 
     'attributes' => [
         'shop_name' =>'店名',
-        'address' =>'住所'
+        'address' =>'住所',
+        'comment' =>'おすすめ'
     ],
 
 ];

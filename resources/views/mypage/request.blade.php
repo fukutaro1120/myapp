@@ -47,14 +47,14 @@ requestです<br>
           <div class="col-md-3">
               <label >性別</label>
           </div>
-          <div class="col-md-7">
-          <div class="form-group row">
+          <div class="col-md-6 pl-4">
+                <div class="form-group row">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="男">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="男">
                         <label class="form-check-label" for="inlineRadio1">男性</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="女">
+                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="女">
                         <label class="form-check-label" for="inlineRadio2">女性</label>
                     </div>
                 </div>
