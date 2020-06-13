@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Shop;
+use App\Models\ShopRequest;
+use Illuminate\Support\Facades\Auth;
 use phpDocumentor\Reflection\Types\Nullable;
 
 use Illuminate\Support\Facades\DB;
@@ -32,7 +34,7 @@ class MyPageController extends Controller
         return view('mypage.create');
     }
 
-
+// 店新規登録
     /**
      * Show the form for creating a new resource.
      *
@@ -60,6 +62,7 @@ class MyPageController extends Controller
         return view('mypage.create');
     }
 
+//クリエイトで入力された内容を受け取るアクション
 
     /**
      * Store a newly created resource in storage.
@@ -67,90 +70,116 @@ class MyPageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //クリエイトで入力された内容を受け取るアクション
-        // データを受け取る処理を記載
-    }
+        public function store(Request $request)
+        {
+            // データを受け取る処理を記載
+        }
 
 
+// 会員別のショップのデータ一覧を取得して、それを表示
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Request $request)
-    {
-        // 会員別のショップのデータ一覧を取得して、それを表示
-      $shops = DB::table('shops')
-       ->select('id','shop_name','address','category','image_path')
-       ->get();
-
-        // dd($shops);
-
-        return view('mypage.show', compact('shops'));
-    }
-
-
-
-    // 店テーブルの一覧を表示する
-    public function check(Request $request)
-    {
-        // 登録しているお店の一覧を表示、それを表示
+        /**
+         * Display the specified resource.
+         *
+         * @param  int  $id
+         * @return \Illuminate\Http\Response
+         */
+        public function show(Request $request)
+        {
         $shops = DB::table('shops')
-       ->select('id','shop_name','address')
-       ->get();
+        ->select('id','shop_name','address','category','image_path')
+        ->get();
 
-        return view('mypage.check',compact('shops'));
-    }
+            // dd($shops);
 
-
-
-    public function list(Request $request)
-    {
-        $shop = Shop::find($request->id);
-
-        return view('mypage.update',['shop' =>$shop]);
-    }
+            return view('mypage.show', compact('shops'));
+        }
 
 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Request $request)
-    {
-        //マイページに登録している店舗の詳細へ表示
-        $shops = Shop::find($request->id);
+// 店テーブルの一覧を表示する
+        public function check(Request $request)
+        {
+            // 登録しているお店の一覧を表示、それを表示
+            $shops = DB::table('shops')
+        ->select('id','shop_name','address')
+        ->get();
 
-        // dd($shops);
+            return view('mypage.check',compact('shops'));
+        }
 
-        return view('mypage.edit',['shop' => $shops]);
-    }
+
+
+        public function list(Request $request)
+        {
+            $shop = Shop::find($request->id);
+
+            return view('mypage.update',['shop' =>$shop]);
+        }
+
+
     
-    public function request()
-    {
-        return view ('mypage.request');
-    }
+//マイページに登録している店舗の詳細へ表示
+        /**
+         * Show the form for editing the specified resource.
+         *
+         * @param  int  $id
+         * @return \Illuminate\Http\Response
+         */
+        public function edit(Request $request)
+        {
+            $shops = Shop::find($request->id);
 
 
-    public function evaluation(Request $request)
-    {
-        $shop = Shop::find($request->id);
+            return view('mypage.edit',['shop' => $shops]);
+        }
+    
 
-        return view('mypage.evaluation',['shop' =>$shop]);
+
+// リクエストページ
+        public function req(Request $request)
+        {
+            return view ('mypage.request');
+        }
+
+
+// リクエストの送付
+        public function request(Request $request)
+        {
+            $this->validate($request,ShopRequest::$rules);
+
+            $shop_requests = new ShopRequest;
+            $form = $request->all();
+            
+            // dd($form);
+            
+            unset($form[' _token']);
+
+            $shop_requests->user_id = Auth::id();
+            $shop_requests->fill($form)->save();
+
+            
+            return view ('mypage.request');
+        }
+
+
+
+
+
+// 評価送付
+        public function evaluation(Request $request)
+        {
+            $shop = Shop::find($request->id);
+
+            return view('mypage.evaluation',['shop' =>$shop]);
+            
+        }
+
+
+
+
         
-    }
-
-
-
-
-
+//編集した内容の更新とDBへの保存
     /**
      * Update the specified resource in storage.
      *
@@ -158,30 +187,32 @@ class MyPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
-    {
-        //編集した内容の更新とDBへの保存
+        public function update(Request $request)
+        {
 
-        $shop = Shop::find($request->id);
-        $shop_date = $request->all();
+            $shop = Shop::find($request->id);
+            $shop_date = $request->all();
 
-        // dd($shop_date);
+            // dd($shop_date);
 
-        if (isset($shop_date['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $shop->image_path = basename($path);
-            unset($shop_date['image']);
-          } elseif (isset($request->remove)) {
-            $shop->image_path = null;
-            unset($shop_date['remove']);
-          }
-          unset($shop_date['_token']);
-          // 該当するデータを上書きして保存する
-          $shop->fill($shop_date)->save();
-    
-        return view ('mypage.update',['shop' =>$shop]);
-    
-    }
+            if (isset($shop_date['image'])) {
+                $path = $request->file('image')->store('public/image');
+                $shop->image_path = basename($path);
+                unset($shop_date['image']);
+            } elseif (isset($request->remove)) {
+                $shop->image_path = null;
+                unset($shop_date['remove']);
+            }
+            unset($shop_date['_token']);
+            // 該当するデータを上書きして保存する
+            $shop->fill($shop_date)->save();
+        
+            return view ('mypage.update',['shop' =>$shop]);
+        
+        }
+
+// マイページのお店の削除
+// 該当するNews Modelを取得
 
     /**
      * Remove the specified resource from storage.
@@ -189,17 +220,15 @@ class MyPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Request $request)
-    {
-        // マイページのお店の削除
-        // 該当するNews Modelを取得
-      $shops = Shop::find($request->id);
+            public function delete(Request $request)
+            {
+            $shops = Shop::find($request->id);
 
-      // 削除する
-      $shops->delete();
-      
-      return redirect('mypage/check');
+            // 削除する
+            $shops->delete();
+            
+            return redirect('mypage/check');
 
 
-    }
+            }
 }
