@@ -25,8 +25,9 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::post('create', 'MyPageController@create')->name('mypage.create');
    
     Route::post('store', 'MyPageController@store')->name('mypage.store');
-// 店一覧
+// 登録店一覧
     Route::get('show', 'MyPageController@show')->name('mypage.show');
+    
 // 店の詳細
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
 // 削除
@@ -37,15 +38,18 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('check', 'MyPageController@check')->name('mypage.check');
     Route::get('update', 'MyPageController@list')->name('mypage.list');
     Route::post('update', 'MyPageController@update')->name('mypage.update');
-
+    
 // マイページへ一覧からお店を登録
     Route::get('edit', 'MyPageController@up')->name('mypage.edit');
     Route::post('edit', 'MyPageController@mypageup')->name('mypage.mypageup');
-
+    
+//  マイページへ登録している店一覧   
+    Route::get('mypagelist', 'MyPageController@mypagelist')->name('mypage.mypagelist');
 
  // 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
+    
 // 評価ページ
     Route::get('evaluation', 'MyPageController@score')->name('mypage.score');
     Route::post('evaluation', 'MyPageController@evaluation')->name('mypage.evaluation');

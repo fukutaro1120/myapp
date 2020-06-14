@@ -4,6 +4,7 @@
 
 マイページ一覧画面です
 
+
 <div class="container mt-5">
   <div class="row">
       @foreach($shops as $shop)

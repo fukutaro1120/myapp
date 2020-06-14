@@ -5,9 +5,8 @@
 
 <div class="container mt-5">
   <div class="row">
-    {{ dd($shop) }}
-
-      @foreach($shop as $s)
+   
+      @foreach($shops as $shop)
 
             <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
                 <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 ">

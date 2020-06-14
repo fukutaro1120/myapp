@@ -38,18 +38,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link pl-5" href="{{ route('mypage.show') }}">おすすめ一覧</a>
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.show') }}">おすすめ一覧</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link pl-5" href="{{ route('mypage.create') }}">店の新規登録</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.mypagelist') }}">マイページ一覧</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link pl-5" href="{{ route('mypage.check') }}">登録店舗の更新</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.create') }}">店の新規登録</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link pl-5" href="{{ route('mypage.request') }}">リクエストを送る</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.check') }}">登録店舗の更新</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストを送る</a>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

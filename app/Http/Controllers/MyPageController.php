@@ -89,13 +89,13 @@ class MyPageController extends Controller
          */
         public function show(Request $request)
         {
-        $shop = DB::table('shops')
+        $shops = DB::table('shops')
         ->select('id','shop_name','address','category','image_path')
         ->get();
 
             // dd($shops);
 
-            return view('mypage.show', compact('shop'));
+            return view('mypage.show', compact('shops'));
         }
 
 // 会員別のマイページ登録しているショップの一覧を取得
@@ -160,6 +160,24 @@ class MyPageController extends Controller
             return view('mypage.mypageup',['shops' =>$shops]);
 
         }
+
+//  マイページ店舗の一覧へ
+        public function mypagelist(Request $request)
+        { 
+            
+            $myshop = Auth::user();
+            
+            $mypageup = new MypageUp;  
+            $shops = Auth::user()->shops()->get();
+            
+            if(empty($shops)){
+                return redirect("mypage.show");
+            }
+            // dd($shops);
+
+            return view('mypage.mypageup',['shops' =>$shops]);
+        
+        }       
     
 
 
