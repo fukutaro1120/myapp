@@ -38,11 +38,17 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('update', 'MyPageController@list')->name('mypage.list');
     Route::post('update', 'MyPageController@update')->name('mypage.update');
 
- // リクエスト
+// マイページへ一覧からお店を登録
+    Route::get('edit', 'MyPageController@up')->name('mypage.edit');
+    Route::post('edit', 'MyPageController@mypageup')->name('mypage.mypageup');
+
+
+ // 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
 // 評価ページ
-    Route::get('evaluation', 'MyPageController@evaluation')->name('mypage.evaluation');
+    Route::get('evaluation', 'MyPageController@score')->name('mypage.score');
+    Route::post('evaluation', 'MyPageController@evaluation')->name('mypage.evaluation');
 });
 
 Auth::routes();

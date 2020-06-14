@@ -62,10 +62,19 @@
     <div class="row">
       <div class="col-md-4"></div>
           <div class="col-sm-2">
-            <a href="pro.html">
-              <button type="button" class="btn btn-outline-primary">マイページ追加</button>
-            </a>
+
+          
+    <!-- マイページへの追加 -->
+          <form action="{{ action('MyPageController@mypageup') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            {{ csrf_field() }}
+            <input type="hidden" value="{{ $shop->id }}" name="shop_id">
+            <input type="submit" class="btn btn-primary">
+          </form>
           </div>
+    <!-- マイページ追加処理ここまで -->
+
+
       <div class="col-md-4">
           <a href="{{ route('mypage.evaluation') . '?id=' . strval($shop->id) }}">
              <button type="button" class="btn btn-outline-primary">評価入力</button>

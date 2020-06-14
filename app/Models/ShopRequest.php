@@ -8,6 +8,10 @@ class ShopRequest extends Model
 {
     protected $guarded = array('id');
 
+    public function user(){
+        return $this->belongsToMany('App\User');
+    }
+
     public static $rules = array(
         'shop_name' => 'required',
         'address' => 'required',

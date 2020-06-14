@@ -9,8 +9,12 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     
-    public function requests(){
-        return $this->hasMany('App\Models\Request');
+    public function shop_requests(){
+        return $this->hasMany('App\Models\ShopRequest');
+    }
+
+    public function shops(){
+        return $this->belongsToMany('App\Models\Shop','mypage_ups','user_id','shop_id');
     }
 
 

@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Shop;
 use App\Models\ShopRequest;
+use App\Models\MypageUp;
+
+
 use Illuminate\Support\Facades\Auth;
 use phpDocumentor\Reflection\Types\Nullable;
 
@@ -34,7 +37,7 @@ class MyPageController extends Controller
         return view('mypage.create');
     }
 
-// 店新規登録
+// 店を新規登録する
     /**
      * Show the form for creating a new resource.
      *
@@ -62,7 +65,7 @@ class MyPageController extends Controller
         return view('mypage.create');
     }
 
-//クリエイトで入力された内容を受け取るアクション
+//クリエイトで入力された内容を受け取る
 
     /**
      * Store a newly created resource in storage.
@@ -76,7 +79,7 @@ class MyPageController extends Controller
         }
 
 
-// 会員別のショップのデータ一覧を取得して、それを表示
+// ショップのデータ一覧を取得して、それを表示
 
         /**
          * Display the specified resource.
@@ -86,14 +89,16 @@ class MyPageController extends Controller
          */
         public function show(Request $request)
         {
-        $shops = DB::table('shops')
+        $shop = DB::table('shops')
         ->select('id','shop_name','address','category','image_path')
         ->get();
 
             // dd($shops);
 
-            return view('mypage.show', compact('shops'));
+            return view('mypage.show', compact('shop'));
         }
+
+// 会員別のマイページ登録しているショップの一覧を取得
 
 
 
@@ -102,12 +107,11 @@ class MyPageController extends Controller
         {
             // 登録しているお店の一覧を表示、それを表示
             $shops = DB::table('shops')
-        ->select('id','shop_name','address')
-        ->get();
+            ->select('id','shop_name','address')
+            ->get();
 
             return view('mypage.check',compact('shops'));
         }
-
 
 
         public function list(Request $request)
@@ -126,12 +130,35 @@ class MyPageController extends Controller
          * @param  int  $id
          * @return \Illuminate\Http\Response
          */
-        public function edit(Request $request)
+
+        public function up(Request $request)
+        { 
+          $shop = Shop::find($request->id);
+          
+          return view('mypage.edit',['shop' =>$shop]);
+        }
+
+
+        public function mypageup(Request $request)
         {
-            $shops = Shop::find($request->id);
 
+            $shop= Shop::find($request->shop_id);
+            if(empty($shop)){
+                return redirect("mypage.show");
+            }
 
-            return view('mypage.edit',['shop' => $shops]);
+            $mypageup = new MypageUp;         
+
+            $mypageup->user_id = Auth::id();
+            $mypageup->shop_id =$request->shop_id;
+            // dd($mypageup);
+           
+            $mypageup->save();
+
+            $shops = Auth::user()->shops()->get();
+
+            return view('mypage.mypageup',['shops' =>$shops]);
+
         }
     
 
@@ -166,10 +193,19 @@ class MyPageController extends Controller
 
 
 
-// 評価送付
+// 評価関連（評価画面にいく）
+        public function score(Request $request)
+        {
+            $shop = Shop::find($request->id);
+
+            return view('mypage.evaluation',['shop' =>$shop]);
+            
+        }
+// 評価関連（評価を送る）
         public function evaluation(Request $request)
         {
             $shop = Shop::find($request->id);
+
 
             return view('mypage.evaluation',['shop' =>$shop]);
             
@@ -210,6 +246,8 @@ class MyPageController extends Controller
             return view ('mypage.update',['shop' =>$shop]);
         
         }
+
+
 
 // マイページのお店の削除
 // 該当するNews Modelを取得
