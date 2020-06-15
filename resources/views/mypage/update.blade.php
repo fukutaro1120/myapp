@@ -82,30 +82,30 @@ updateです<br>
             </div>
         </div>    
     </div>
-  
-
     <div class="container">
         <div class="form-group row">
-              <label for="addImage" class="col-sm-3 col-form-label">画像</label>          
+            <label for="addImage" class="col-sm-3 col-form-label">画像</label>          
             <div class="col-sm-9">
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" name="image">
-                      <label class="custom-file-label" for="addimage"></label>  
+                    <label class="custom-file-label" for="addimage"></label>  
                 </div>
             </div>
         </div>
     </div>    
-  
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-3">
-               <input type="hidden" name="id" value="{{ $shop->id }}">
-               {{ csrf_field() }}
-              <input type="submit" class="btn btn-primary" value="更新">
-          </div>
-      </div>
-  </div>
+      
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="hidden" name="id" value="{{ $shop->id }}">
+                {{ csrf_field() }}
+                <input type="submit" class="btn btn-primary" value="更新">
+            </div>
+        </div>
+    </div>
 </form>
 
+
+<hr>
 
 @endsection

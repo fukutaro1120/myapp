@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Shop;
+
 use App\Models\ShopRequest;
 use App\Models\MypageUp;
+
 
 
 use Illuminate\Support\Facades\Auth;
@@ -48,18 +50,56 @@ class MyPageController extends Controller
         $this->validate($request, Shop::$rules);
 
         $shop = new Shop;
+        
         $form = $request->all();
-
+        // dd($form);
+        
+        // 画像
         if(isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
             $shop->image_path = basename($path);
+            // dd($shop->image_path);
         }else{
             $shop->image_path = null;
         }
+        //  画像1
+        if(isset($form['image1'])) 
+        {
+            
+            $path = $request->file('image1')->store('public/image');
+            $shop->image_path1 = basename($path);
+          
+        }else{
+            $shop->image_path1 = null;
+        }
+        // 画像2
+                if(isset($form['image2'])) {
+                
+                    $path = $request->file('image2')->store('public/image');
+                    $shop->image_path2 = basename($path);
+                }else{
+                    $shop->image_path2 = null;
+                }
+                
+        // 画像3
+                 if(isset($form['image3'])) {
+                        
+                    $path = $request->file('image3')->store('public/image');
+                     $shop->image_path3 = basename($path);
+                }else{
+                    $shop->image_path3 = null;
+                }
+
 
         unset($form['_token']);
         unset($form['image']);
+        unset($form['image1']);
+        unset($form['image2']);
+        unset($form['image3']);
+        
         $shop->fill($form);
+
+
         $shop->save();
 
         return view('mypage.create');
@@ -231,8 +271,6 @@ class MyPageController extends Controller
         }
 
 
-
-
         
 //編集した内容の更新とDBへの保存
     /**
@@ -265,6 +303,9 @@ class MyPageController extends Controller
             return view ('mypage.update',['shop' =>$shop]);
         
         }
+
+
+
 
 
 

@@ -39,6 +39,9 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('update', 'MyPageController@list')->name('mypage.list');
     Route::post('update', 'MyPageController@update')->name('mypage.update');
     
+// 登録店舗に画像を追加
+    // Route::post('update', 'MyPageController@shopphot')->name('mypage.shopphot');
+    
 // マイページへ一覧からお店を登録
     Route::get('edit', 'MyPageController@up')->name('mypage.edit');
     Route::post('edit', 'MyPageController@mypageup')->name('mypage.mypageup');

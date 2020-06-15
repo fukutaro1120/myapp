@@ -21,7 +21,11 @@ class CreateShopsTable extends Migration
             $table->string('recommend');
             $table->string('interior');
             $table->string('image_path')->nullable();
+            
             $table->timestamps();
+
+            
+
         });
     }
 

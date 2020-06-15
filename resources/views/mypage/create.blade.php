@@ -60,11 +60,11 @@
             おすすめ料理
         </div>
         <div class="col-sm-7">
-            <!-- <form> -->
+         
               <div class="form-group">
                <input class="form-control"type="text" name="recommend" value="{{ old('recommend') }}" >
               </div>
-            <!-- </form> -->
+      
         </div>
       </div>    
     </div>
@@ -75,22 +75,55 @@
           お店の作り
           </div>
         <div class="col-sm-7">
-          <!-- <form> -->
+          
             <div class="form-group">
               <input class="form-control"type="text" name="interior" value="{{ old('interior') }}" >
             </div>
-          <!-- </form> -->
+        
         </div>
       </div>    
     </div>
   
-
+<!-- 画像追加 -->
     <div class="container">
       <div class="form-group row">
-        <label for="addImage" class="col-sm-3 col-form-label">画像</label>          
+        <label for="addImage" class="col-sm-3 col-form-label">画像（一覧用）</label>          
         <div class="col-sm-7">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image[]">
+            <input type="file" class="custom-file-input" name="image">
+            <label class="custom-file-label" for="addImage"></label>  
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="container">
+      <div class="form-group row">
+        <label for="addImage" class="col-sm-3 col-form-label">画像1</label>          
+        <div class="col-sm-7">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image1">
+            <label class="custom-file-label" for="addImage"></label>  
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="container">
+      <div class="form-group row">
+        <label for="addImage" class="col-sm-3 col-form-label">画像2</label>          
+        <div class="col-sm-7">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image2">
+            <label class="custom-file-label" for="addImage"></label>  
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="container">
+      <div class="form-group row">
+        <label for="addImage" class="col-sm-3 col-form-label">画像3</label>          
+        <div class="col-sm-7">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image3">
             <label class="custom-file-label" for="addImage"></label>  
           </div>
         </div>
