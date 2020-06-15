@@ -14,10 +14,10 @@
 
                       <div class="container mb-3">
                           <div class="row">
-                              <div class="col-6">
-                                <h6>店名:</h6>
+                              <div class="col-sm-6">
+                                <h5 class="font-weight-bold">店名</h5>
                               </div>
-                              <div class="col-6">
+                              <div class="col-sm-6">
                                 <h6 class="card-title">{{ $shop->shop_name }}</h6>
                               </div>
                           </div>
@@ -25,8 +25,8 @@
 
                       <div class="container mb-3">
                           <div class="row">
-                              <div class="col-6">
-                                <h6>ジャンル:</h6>
+                              <div class="col-sm-6">
+                                <h5 class="font-weight-bold">ジャンル</h5>
                               </div>
                               <div class="col-6">
                                 <h6 class="card-title">{{ $shop->category }}</h6>
@@ -36,10 +36,10 @@
 
                       <div class="container mb-4">
                           <div class="row">
-                              <div class="col-6">
-                                <h6>住所:</h6>
+                              <div class="col-sm-6">
+                                <h5 class="font-weight-bold">住所</h5>
                               </div>
-                              <div class="col-6">
+                              <div class="col-sm-6">
                                 <h6 class="card-title">{{ $shop->address }}</h6>
                               </div>
                           </div>
@@ -53,4 +53,5 @@
         @endforeach
     </div>
 </div>
+<link href="{{ asset('css/bak.css') }}" rel="stylesheet">
 @endsection

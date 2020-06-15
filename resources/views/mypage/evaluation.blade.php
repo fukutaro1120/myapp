@@ -14,8 +14,7 @@ evaluationです<br>
               <h1>店名：{{ $shop->shop_name }}</h1>
               </div>
               <label for="exampleFormControlSelect1">■満足度チェック</label>
-          
-              
+
     <div class="container">
         <div class="row">
             <div class="col-md-3 my-0">
@@ -25,7 +24,6 @@ evaluationです<br>
             </div>
             <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                  <option>-選択してください-</option>
                   <option value="5">大満足</option>
                   <option value="4">満足</option>
                   <option value="3">普通</option>
@@ -44,7 +42,6 @@ evaluationです<br>
             </div>
             <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                  <option>-選択してください-</option>
                   <option value="5">大満足</option>
                   <option value="4">満足</option>
                   <option value="3">普通</option>
@@ -63,7 +60,7 @@ evaluationです<br>
             </div>
             <div class="col-md-9 mb-3">
               <select class="form-control" id="exampleFormControlSelect1">
-                  <option>-選択してください-</option>
+                 
                   <option value="5">大満足</option>
                   <option value="4">満足</option>
                   <option value="3">普通</option>
@@ -103,10 +100,7 @@ evaluationです<br>
     </div>
     </div>
   </form>
-            
-          
-            
-          
-  
+                      
+
       
 @endsection

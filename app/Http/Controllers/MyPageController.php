@@ -63,6 +63,7 @@ class MyPageController extends Controller
         $shop->save();
 
         return view('mypage.create');
+        
     }
 
 //クリエイトで入力された内容を受け取る

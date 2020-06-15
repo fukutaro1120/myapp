@@ -106,4 +106,6 @@ updateです<br>
       </div>
   </div>
 </form>
+
+
 @endsection

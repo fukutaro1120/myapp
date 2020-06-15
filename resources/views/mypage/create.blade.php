@@ -90,7 +90,7 @@
         <label for="addImage" class="col-sm-3 col-form-label">画像</label>          
         <div class="col-sm-7">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image">
+            <input type="file" class="custom-file-input" name="image[]">
             <label class="custom-file-label" for="addImage"></label>  
           </div>
         </div>
@@ -99,11 +99,15 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-3"></div>
+      <div class="col-sm-7 text-right">
         {{ csrf_field() }}
         <input type="submit" class="btn btn-primary">
       </div>
     </div>
   </div>
 </form>
+<hr>
+
+
 @endsection
