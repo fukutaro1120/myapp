@@ -52,22 +52,24 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="form-group">
                         <div class="container">
                             <div class="row">
                               <div class="col-md-3"></div>
-                                  <div class="col-md-9">
-                                      <!-- <button type="button" class="btn btn-outline-primary">送信</button> -->
+                                  <div class="col-md-9"> 
                                       {{ csrf_field() }}
+                                      <input type="hidden" value="{{ $shop->id }}" name="shop_id">
                                       <input type="submit" class="btn btn-primary">
                                   </div>
                             </div>
                         </div>
                     </div>
-           </div>
+          </div>
         </div>
      </div>
   </form>
+
                       
 <hr>
 以下掲示板

@@ -8,6 +8,7 @@ use App\Models\Shop;
 
 use App\Models\ShopRequest;
 use App\Models\MypageUp;
+use App\Models\Board;
 
 
 
@@ -168,6 +169,7 @@ class MyPageController extends Controller
 
     
 //マイページに登録している店舗の詳細へ表示
+
         /**
          * Show the form for editing the specified resource.
          *
@@ -182,7 +184,7 @@ class MyPageController extends Controller
           return view('mypage.edit',['shop' =>$shop]);
         }
 
-
+//マイページテーブルに保存
         public function mypageup(Request $request)
         {
 
@@ -217,7 +219,7 @@ class MyPageController extends Controller
             if(empty($shops)){
                 return redirect("mypage.show");
             }
-            // dd($shops);
+        
 
             return view('mypage.mypageup',['shops' =>$shops]);
         
@@ -262,17 +264,38 @@ class MyPageController extends Controller
             return view('mypage.evaluation',['shop' =>$shop]);
             
         }
-// 掲示板へコメントを送る
-        public function evaluation(Request $request)
+// 掲示板へコメントを保存する
+        public function boardup(Request $request)
         {
+            $shop= Shop::find($request->shop_id);
+            $form = $request->all();      
+         
+            $board = new Board;   
+            
+            $board->user_id = Auth::id();
+            $board->shop_id =$request->shop_id;
+            $board->comment =$request->body;
            
-            $shop = Shop::find($request->id);
-
-
-            return view('mypage.evaluation',['shop' =>$shop]);
+            $board->save();
+    
+            return view('mypage.edit',['shop' =>$shop]);
             
         }
-
+         
+    // 掲示板画面へ
+        public function boardlist(Request $request)
+        {
+         
+            // $mylist = Auth::user();
+            $shop= Shop::find($request->id);
+            $board = new Board; 
+            $boards = $shop->boards()->get();
+ 
+           
+            return view('mypage.board',['boards' =>$boards]);
+            
+        }
+    
 
         
 //編集した内容の更新とDBへの保存

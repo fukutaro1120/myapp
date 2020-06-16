@@ -48,6 +48,9 @@
                           
                       <div class="text-right">
                           <a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}" class="btn btn-primary">詳細</a>
+                      
+                      
+                          <a href="{{ route('mypage.boardlist') . '?id=' . strval($shop->id) }}" class="btn btn-primary">掲示板</a>
                       </div>
                   </div>
             </div>

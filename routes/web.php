@@ -49,13 +49,16 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 //  マイページへ登録している店一覧   
     Route::get('mypagelist', 'MyPageController@mypagelist')->name('mypage.mypagelist');
 
- // 新規登録のリクエスト
+// 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
     
-// 掲示板へのコメント送付
+// 掲示板へのコメントを保存
     Route::get('evaluation', 'MyPageController@board')->name('mypage.evaluation');
     Route::post('evaluation', 'MyPageController@boardup')->name('mypage.boardup');
+
+// 掲示板へ 
+    Route::get('board', 'MyPageController@boardlist')->name('mypage.boardlist');
 });
 
 Auth::routes();
