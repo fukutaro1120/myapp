@@ -52,9 +52,9 @@ class MyPageController extends Controller
         $shop = new Shop;
         
         $form = $request->all();
-        // dd($form);
+  
         
-        // 画像
+    // 画像
         if(isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
             $shop->image_path = basename($path);
@@ -62,7 +62,8 @@ class MyPageController extends Controller
         }else{
             $shop->image_path = null;
         }
-        //  画像1
+
+    //  画像1
         if(isset($form['image1'])) 
         {
             
@@ -72,7 +73,8 @@ class MyPageController extends Controller
         }else{
             $shop->image_path1 = null;
         }
-        // 画像2
+
+    // 画像2
                 if(isset($form['image2'])) {
                 
                     $path = $request->file('image2')->store('public/image');
@@ -80,8 +82,8 @@ class MyPageController extends Controller
                 }else{
                     $shop->image_path2 = null;
                 }
-                
-        // 画像3
+            
+    // 画像3
                  if(isset($form['image3'])) {
                         
                     $path = $request->file('image3')->store('public/image');
@@ -96,7 +98,7 @@ class MyPageController extends Controller
         unset($form['image1']);
         unset($form['image2']);
         unset($form['image3']);
-        
+
         $shop->fill($form);
 
 
@@ -106,6 +108,7 @@ class MyPageController extends Controller
         
     }
 
+    
 //クリエイトで入力された内容を受け取る
 
     /**
@@ -237,7 +240,6 @@ class MyPageController extends Controller
             $shop_requests = new ShopRequest;
             $form = $request->all();
             
-            // dd($form);
             
             unset($form[' _token']);
 

@@ -39,11 +39,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.show') }}">おすすめ一覧</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.show') }}">登録店舗一覧</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.mypagelist') }}">マイページ一覧</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.mypagelist') }}">マイページ</a>
                         </li>
 
                         <li class="nav-item">

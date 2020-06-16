@@ -2,74 +2,32 @@
 
 @section('content')
 
-evaluationです<br>
-お店の評価ページ
+
+お店の掲示板送信フォーム
 
 <form action="#" method="post">
  @csrf
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-              <div class="form-group">
-              <h1>店名：{{ $shop->shop_name }}</h1>
-              </div>
-              <label for="exampleFormControlSelect1">■満足度チェック</label>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 my-0">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">料理</label>
+            <div class="col-md-9">
+              <div class="form-group text-center">
+              <h1>店名：{{ $shop->shop_name }}</h1>
               </div>
-            </div>
-            <div class="col-md-9 mb-3">
-              <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="5">大満足</option>
-                  <option value="4">満足</option>
-                  <option value="3">普通</option>
-                  <option value="2">やや物足りない</option>
-                  <option value="1">物足りない</option>
-              </select>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 my-0">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">ドリンク</label>
-              </div>
-            </div>
-            <div class="col-md-9 mb-3">
-              <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="5">大満足</option>
-                  <option value="4">満足</option>
-                  <option value="3">普通</option>
-                  <option value="2">やや物足りない</option>
-                  <option value="1">物足りない</option> 
-              </select>
-            </div>
-        </div>
-    </div>
-    <div class="container my-0">
-        <div class="row">
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">雰囲気</label>
-              </div>
-            </div>
-            <div class="col-md-9 mb-3">
-              <select class="form-control" id="exampleFormControlSelect1">
-                 
-                  <option value="5">大満足</option>
-                  <option value="4">満足</option>
-                  <option value="3">普通</option>
-                  <option value="2">やや物足りない</option>
-                  <option value="1">物足りない</option>
-              </select>
-            </div>
-        </div>
-    </div>
+              <label for="exampleFormControlSelect1">■お店の掲示板へコメント</label>
+
+      <div class="container mt-5">
+          <div class="row">
+                <div class="col-md-3">
+                  タイトル
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                          <input class="form-control"type="text" name="shop_name" value="{{ old('shop_name') }}" >
+                    </div>
+                </div>
+          </div>    
+      </div>
 
     <div class="container">
       <div class="row">

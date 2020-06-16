@@ -60,7 +60,6 @@
             おすすめ料理
         </div>
         <div class="col-sm-7">
-         
               <div class="form-group">
                <input class="form-control"type="text" name="recommend" value="{{ old('recommend') }}" >
               </div>
@@ -92,6 +91,7 @@
           <div class="custom-file">
             <input type="file" class="custom-file-input" name="image">
             <label class="custom-file-label" for="addImage"></label>  
+            <!-- <input type="file" class="form-control-file"  name="image"> -->
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@
       @foreach($shops as $shop)
 
             <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
-                <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 ">
+                <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 img-thumbnail">
                   <div class="card-body">
 
                       <div class="container mb-3">
