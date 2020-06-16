@@ -254,15 +254,15 @@ class MyPageController extends Controller
 
 
 
-// 評価関連（評価画面にいく）
-        public function score(Request $request)
+// 掲示板へのコメント送付画面にいく
+        public function board(Request $request)
         {
             $shop = Shop::find($request->id);
 
             return view('mypage.evaluation',['shop' =>$shop]);
             
         }
-// 評価関連（評価を送る）
+// 掲示板へコメントを送る
         public function evaluation(Request $request)
         {
             $shop = Shop::find($request->id);

@@ -5,7 +5,7 @@
 
 お店の掲示板送信フォーム
 
-<form action="#" method="post">
+<form action="{{ action('MyPageController@boardup') }}" method="post">
  @csrf
 
     <div class="container">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="form-group">
-                          <input class="form-control"type="text" name="shop_name" value="{{ old('shop_name') }}" >
+                          <input class="form-control"type="text" name="taitle" value="{{ old('title') }}" >
                     </div>
                 </div>
           </div>    
@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-9">
            <div class="form-group">
-             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+             <textarea class="form-control" name="body" rows="5"></textarea>
              ※コメントは50文字以内です
           </div>
         </div>
