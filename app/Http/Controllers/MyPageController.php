@@ -265,6 +265,7 @@ class MyPageController extends Controller
 // 掲示板へコメントを送る
         public function evaluation(Request $request)
         {
+           
             $shop = Shop::find($request->id);
 
 
@@ -305,10 +306,6 @@ class MyPageController extends Controller
             return view ('mypage.update',['shop' =>$shop]);
         
         }
-
-
-
-
 
 
 // マイページのお店の削除

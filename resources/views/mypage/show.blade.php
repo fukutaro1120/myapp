@@ -3,13 +3,14 @@
 @section('content')
 
 
-<div class="container mt-5">
+<div class="container">
+<div class="bg-rgba pt-5">
   <div class="row">
    
       @foreach($shops as $shop)
 
-            <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
-                <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 img-thumbnail">
+            <div class="card col-md-3 shadow mb-5 p-0 mr-5 ">
+                <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100">
                   <div class="card-body">
 
                       <div class="container mb-3">
@@ -52,6 +53,7 @@
             </div>
         @endforeach
     </div>
+</div>
 </div>
 
 

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+f
 
-マイページ一覧画面です
-
-
-<div class="container mt-5">
+<div class="container">
+<div class="bg-rgba pt-5">
   <div class="row">
+  
       @foreach($shops as $shop)
-            <div class="card col-md-3 shadow mb-5 p-0 m-0 ">
+            <div class="card col-md-3 shadow mb-5 p-0 mr-5 ">
                 <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100 ">
                   <div class="card-body">
 
@@ -53,5 +53,7 @@
         @endforeach
     </div>
 </div>
+</div>
+
 <link href="{{ asset('css/bak.css') }}" rel="stylesheet">
 @endsection

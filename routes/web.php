@@ -54,8 +54,8 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::post('request', 'MyPageController@request')->name('mypage.request');
     
 // 掲示板へのコメント送付
-    Route::get('evaluation', 'MyPageController@board')->name('mypage.score');
-    Route::post('evaluation', 'MyPageController@evaluation')->name('mypage.evaluation');
+    Route::get('evaluation', 'MyPageController@board')->name('mypage.evaluation');
+    Route::post('evaluation', 'MyPageController@boardup')->name('mypage.boardup');
 });
 
 Auth::routes();

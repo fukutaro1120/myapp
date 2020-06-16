@@ -74,7 +74,5 @@
     </div>
 </div>
 
-<hr>
-ここからお店の掲示板へ
 
 @endsection
