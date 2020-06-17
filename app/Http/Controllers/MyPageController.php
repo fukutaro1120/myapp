@@ -308,8 +308,10 @@ class MyPageController extends Controller
          
             // $mylist = Auth::user();
             $shop= Shop::find($request->id);
-            $board = new Board; 
+            $board = new Board;
             $boards = $shop->boards()->get();
+            $boards =Board::all()->sortByDesc('created_at');
+      
  
            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
