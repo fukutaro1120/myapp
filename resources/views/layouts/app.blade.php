@@ -24,8 +24,7 @@
 </head>
 <body>
     <div id="app">
-        
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container ml-0">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/storage/img/musubi.jpg" width="50" height="40" alt="" loading="lazy">
@@ -43,7 +42,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.mypagelist') }}">マイページ</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.mypagelist') }}">マイページ一覧</a>
                         </li>
 
                         <li class="nav-item">
@@ -51,13 +50,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.check') }}">登録店舗の更新</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.check') }}">登録店の更新</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストを送る</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエスト</a>
                         </li>
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -95,8 +93,9 @@
                 </div>
             </div>
         </nav>
+  
 
-        <main class="">
+        <main class="mt-5">
             @yield('content')
         </main>
     </div>

@@ -17,23 +17,22 @@
 <hr>
 以下掲示板
 
+<p>自分意外のコメントは削除できません</p>
 
-
-<div class="container">
+<div class="container border">
     <div class="row">
-            <div class="col-md-12 mx-1 center">
+            <div class="col-md-12">
                 <div class="row">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th width="9%">NAME</th>                          
-                                <th width="70%" class="text-center">コメント</th>
-                                <th width="9%">TIME</th>
-                                <th width="12%">削除</th>
+                                <th>投稿者</th>                          
+                                <th class="text-center">コメント</th>
+                                <th>投稿日</th>
+                                <th >削除</th>
                             </tr>
                         </thead>
                         <tbody>   
-                                         
                             @foreach($boards as $board)
                                     <tr>
                                         <td width="9%">{{ $board->user->name}}</td>

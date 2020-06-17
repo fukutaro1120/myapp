@@ -204,9 +204,9 @@ class MyPageController extends Controller
             $shops = Auth::user()->shops()->get();
 
             return view('mypage.mypageup',['shops' =>$shops]);
-
+            
         }
-
+        
 //  マイページ店舗の一覧へ
         public function mypagelist(Request $request)
         { 
@@ -219,12 +219,31 @@ class MyPageController extends Controller
             if(empty($shops)){
                 return redirect("mypage.show");
             }
-        
-
+            
+            
             return view('mypage.mypageup',['shops' =>$shops]);
-        
+            
         }       
-    
+        
+// マイページのお店の削除
+     
+        
+      /**
+         * Remove the specified resource from storage.
+         *
+         * @param  int  $id
+         * @return \Illuminate\Http\Response
+         */
+        public function delete(Request $request)
+        {
+        $shops = Shop::find($request->id);
+        
+        $shops->delete();
+                    
+        return redirect('mypage/check');
+        
+        
+        }
 
 
 // リクエストページ
@@ -315,9 +334,6 @@ class MyPageController extends Controller
 
         }
 
-    
-
-        
 //編集した内容の更新とDBへの保存
     /**
      * Update the specified resource in storage.
@@ -331,8 +347,6 @@ class MyPageController extends Controller
 
             $shop = Shop::find($request->id);
             $shop_date = $request->all();
-
-            // dd($shop_date);
 
             if (isset($shop_date['image'])) {
                 $path = $request->file('image')->store('public/image');
@@ -351,24 +365,4 @@ class MyPageController extends Controller
         }
 
 
-// マイページのお店の削除
-// 該当するNews Modelを取得
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-            public function delete(Request $request)
-            {
-            $shops = Shop::find($request->id);
-
-            // 削除する
-            $shops->delete();
-            
-            return redirect('mypage/check');
-
-
-            }
 }

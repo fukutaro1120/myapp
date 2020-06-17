@@ -15,7 +15,8 @@
     </ul>
 @endif
 
-    <div class="container mt-5">
+
+    <div class="container pt-5 mt-5">
           <div class="row">
                 <div class="col-sm-3">
                   店舗名
@@ -27,6 +28,7 @@
                 </div>
           </div>    
       </div>
+    
    
     <div class="container ">
         <div class="row">
