@@ -9,11 +9,11 @@
   
 <div class="jumbotron jumbotron-fluid text-center p-0">
   <div class="bg-rgba pt-5 pb-3">
-          <h3 class="fade py-3">人と酒</h3>
-          <h3 class="fade py-3">人と店</h3>
-          <h3 class="fade py-3">人と人</h3>
-          <h3 class="fade py-3">全てを結ぶ</h3>
-          <h1 class="fade py-3">飲musubi</h1>
+          <h3 class="fade py-3"></h3>
+          <h3 class="fade py-3"></h3>
+          <h3 class="fade py-3"></h3>
+          <h3 class="fade py-5"></h3>
+          <h1 class="fade py-5">飲musubi</h1>
 
 
 
@@ -22,9 +22,10 @@
             
 
   <div class="container text-center">
-          <h4 class="">ここにアプリの説明を記入</h4> 
-          <h4 class="">ここにアプリの説明を記入</h4>
-          <h4 class="">ここにアプリの説明を記入</h4>
+          <h4 class="">「人」と「人」</h4> 
+          <h4 class="">「人」と「店」</h4>
+          <h4 class="">「人」と「酒」</h4>
+          <h4 class="">「全てを結ぶ」</h4>
   </div> 
 
 

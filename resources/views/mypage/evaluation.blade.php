@@ -18,15 +18,14 @@
 <form action="{{ action('MyPageController@boardup') }}" method="post">
  @csrf
 
-   <div class="container">
+   <div class="container border">
       <div class="row">
           <div class="col-md-9">
               <div class="form-group text-center">
-              <h1>店名：{{ $shop->shop_name }}</h1>
+              <h1 class="mt-3">店名:{{ $shop->shop_name }}</h1>
               </div>
               <label for="exampleFormControlSelect1">■お店の掲示板へコメント</label>
-
-                    <div class="container mt-5">
+                    <div class="container mt-2">
                         <div class="row">
                               <div class="col-md-3">
                                 タイトル
@@ -54,7 +53,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="container">
+                        <div class="container text-right">
                             <div class="row">
                               <div class="col-md-3"></div>
                                   <div class="col-md-9"> 
@@ -65,41 +64,12 @@
                             </div>
                         </div>
                     </div>
+
           </div>
         </div>
      </div>
   </form>
 
                       
-<hr>
-以下掲示板
-<div class="container">
-<div class="row">
-  <!-- <div class="col-1"></div> -->
-            <div class="col-md-12 center">
-                <div class="row">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th width="10%">NAME</th>                          
-                                <th width="80%" class="text-center">コメント</th>
-                                <th width="10%">TIME</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           <!-- foreachでくりかえす -->
-                                <tr>
-                                    <td width="10%">NAME</td>
-                                    <td width="80%"class="text-center">title</td>
-                                    <td width="10%">cmment</td>
-                                </tr>
-                            <!-- foreachここまで -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-    <!-- <div class="col-md-1"></div> -->
-    </div>
-  </div>
             
 @endsection

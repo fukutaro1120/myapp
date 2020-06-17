@@ -56,11 +56,14 @@
                         <li class="nav-item">
                             <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエスト</a>
                         </li>
-                    </ul>
+                    <!-- </ul> -->
+
+
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <!-- <ul class="navbar-nav ml-auto"> -->
                         <!-- Authentication Links -->
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -95,7 +98,7 @@
         </nav>
   
 
-        <main class="mt-5">
+        <main class="mt-5 mx-1">
             @yield('content')
         </main>
     </div>
