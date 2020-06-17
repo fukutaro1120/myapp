@@ -310,7 +310,7 @@ class MyPageController extends Controller
             $shop= Shop::find($request->id);
             $board = new Board;
             $boards = $shop->boards()->get();
-            $boards =Board::all()->sortByDesc('created_at');
+            // $boards =Board::all()->sortByDesc('created_at');
       
  
            
