@@ -19,10 +19,16 @@
 
 <p>自分意外のコメントは削除できません</p>
 
-<div class="conatiner text-right">
-    <a href=" {{ route('mypage.evaluation') . '?id=' . strval($shop->id) }} "> 
-      <button type="button" class="btn btn-outline-primary">新規コメントの送付</button>
-    </a>
+<div class="conatiner mx-auto ">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 mb-3 text-right">
+            <a href=" {{ route('mypage.evaluation') . '?id=' . strval($shop->id) }} "> 
+                <button type="button" class="btn btn-outline-primary">新規コメントの送付</button>
+            </a>
+        <!-- <div class="col-1"></div> -->
+        </div>
+    </div>
 </div>
 
 <div class="container mx-auto border">
