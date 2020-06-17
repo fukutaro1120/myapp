@@ -59,6 +59,10 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 
 // 掲示板へ 
     Route::get('board', 'MyPageController@boardlist')->name('mypage.boardlist');
+    
+
+    
+
 
 // 掲示板のコメントを削除
     Route::get('commentdelete', 'MyPageController@commentdelete')->name('mypage.commentdelete');

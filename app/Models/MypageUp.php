@@ -12,6 +12,7 @@ class MypageUp extends Model
     public static $rules = array(
         'user_id' => 'required',
         'shop_id' => 'required',
+        'body' => 'required',
         
     );
 }

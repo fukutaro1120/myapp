@@ -286,6 +286,7 @@ class MyPageController extends Controller
 // 掲示板へコメントを保存する
         public function boardup(Request $request)
         {
+            $this->validate($request,Board::$rules);
             $shop= Shop::find($request->shop_id);
             $form = $request->all();      
          
@@ -301,7 +302,7 @@ class MyPageController extends Controller
             
         }
          
-    // 掲示板画面へ
+// 掲示板画面へ
         public function boardlist(Request $request)
         {
          
@@ -311,11 +312,11 @@ class MyPageController extends Controller
             $boards = $shop->boards()->get();
  
            
-            return view('mypage.board',['boards' =>$boards]);
+            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
             
         }
       
-    // 掲示板に投稿したコメントを削除する
+// 掲示板に投稿したコメントを削除する
         public function commentdelete(Request $request)
         {
             $board = Board::find($request->id);

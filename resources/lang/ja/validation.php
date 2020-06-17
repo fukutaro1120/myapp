@@ -119,7 +119,9 @@ return [
     'attributes' => [
         'shop_name' =>'店名',
         'address' =>'住所',
-        'comment' =>'おすすめ'
+        'comment' =>'おすすめ',
+        'body' =>'コメントの入力'
+        
     ],
 
 ];

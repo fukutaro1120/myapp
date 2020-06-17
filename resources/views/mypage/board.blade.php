@@ -19,6 +19,12 @@
 
 <p>自分意外のコメントは削除できません</p>
 
+<div class="conatiner text-right">
+    <a href=" {{ route('mypage.evaluation') . '?id=' . strval($shop->id) }} "> 
+      <button type="button" class="btn btn-outline-primary">新規コメントの送付</button>
+    </a>
+</div>
+
 <div class="container mx-auto border">
     <div class="row">
             <div class="col-md-12">

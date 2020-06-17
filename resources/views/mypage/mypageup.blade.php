@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-f
+
 
 <div class="container">
 <div class="bg-rgba pt-5">

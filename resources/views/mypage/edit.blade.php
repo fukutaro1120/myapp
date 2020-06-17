@@ -66,11 +66,11 @@
             </form>
         </div>
     <!-- マイページ追加処理ここまで -->
-        <div class="col-3">
+        <!-- <div class="col-3">
           <a href="{{ route('mypage.evaluation') . '?id=' . strval($shop->id) }}">
             <button type="button" class="btn btn-outline-primary">掲示板へコメント</button>
           </a>
-        </div>
+        </div> -->
     </div>
 </div>
 

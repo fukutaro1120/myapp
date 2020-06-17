@@ -27,5 +27,6 @@ class Shop extends Model
         'interior' => 'required',
         
         
+        
     );
 }

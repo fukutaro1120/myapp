@@ -22,10 +22,10 @@
             
 
   <div class="container text-center">
-          <h4 class="">「人」と「人」</h4> 
-          <h4 class="">「人」と「店」</h4>
-          <h4 class="">「人」と「酒」</h4>
-          <h4 class="">「全てを結ぶ」</h4>
+          <h4 class="">ここに説明</h4> 
+          <h4 class="">ここに説明</h4>
+          <h4 class="">ここに説明</h4>
+          <h4 class="">ここに説明</h4>
   </div> 
 
 
