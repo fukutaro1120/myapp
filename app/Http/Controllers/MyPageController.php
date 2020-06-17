@@ -295,6 +295,26 @@ class MyPageController extends Controller
             return view('mypage.board',['boards' =>$boards]);
             
         }
+      
+    // 掲示板に投稿したコメントを削除する
+        public function commentdelete(Request $request)
+        {
+            $board = Board::find($request->id);
+            $user = Auth::user();
+           
+            // 他の人のコメントは消せないようにチェック
+            if($board->user_id !== $user->id)
+            {
+                return redirect('mypage/show');
+            }
+       
+            $board->delete();
+            
+            return redirect('mypage/show');
+
+
+        }
+
     
 
         

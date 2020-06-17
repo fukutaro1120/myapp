@@ -12,6 +12,10 @@ class Board extends Model
        return $this->belongsTo("App\User");
     }
 
+    public function shop(){
+       return $this->belongsTo("App\Models\Shop");
+    }
+
 
 
     public static $rules = array(

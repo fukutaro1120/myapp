@@ -13,6 +13,7 @@ class Shop extends Model
 
     public function users(){
         return $this->belongsToMany('App\User','mypage_ups','shop_id','user_id');
+        
         return $this->belongsToMany('App\User','boards','shop_id','user_id');
     }
 
