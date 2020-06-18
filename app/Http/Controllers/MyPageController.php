@@ -271,7 +271,16 @@ class MyPageController extends Controller
             return view ('mypage.request');
         }
 
+// リクエスト一覧
+        public function requestlist(Request $request)
+        {
+            $shop_requests = new ShopRequest;
+            $requests= $shop_requests::all();
+            // dd($requests);
 
+            return view ('mypage.requestlist',['requests' =>$requests]);
+
+        }
 
 
 
@@ -300,7 +309,8 @@ class MyPageController extends Controller
             $board->save();
            
             $boards = $shop->boards()->get();
-            $boards=Board::all()->sortByDesc('created_at');
+            // dd($boards);
+            // $boards->shop_id->sortByDesc('created_at');
     
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
         
@@ -315,7 +325,7 @@ class MyPageController extends Controller
             $boards = $shop->boards()->get();
              
             // 新規コメント順に表示
-            $boards=Board::all()->sortByDesc('created_at');
+            // $boards=Board::all()->sortByDesc('created_at');
            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
             

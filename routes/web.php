@@ -52,7 +52,11 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 // 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
-    
+   
+// リクエストチェック画面
+    Route::get('requestlist', 'MyPageController@requestlist')->name('mypage.requestlist');
+
+
 // 掲示板へのコメントを保存
     Route::get('evaluation', 'MyPageController@board')->name('mypage.evaluation');
     Route::post('evaluation', 'MyPageController@boardup')->name('mypage.boardup');

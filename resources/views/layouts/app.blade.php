@@ -30,6 +30,7 @@
                 <img src="/storage/img/musubi.jpg" width="50" height="40" alt="" loading="lazy">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,7 +55,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエスト</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストを送る</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.requestlist') }}">リクエストリスト</a>
                         </li>
                     <!-- </ul> -->
 
