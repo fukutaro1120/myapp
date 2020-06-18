@@ -283,6 +283,7 @@ class MyPageController extends Controller
             return view('mypage.evaluation',['shop' =>$shop]);
             
         }
+
 // 掲示板へコメントを保存する
         public function boardup(Request $request)
         {
@@ -297,22 +298,24 @@ class MyPageController extends Controller
             $board->comment =$request->body;
            
             $board->save();
+           
+            $boards = $shop->boards()->get();
+            $boards=Board::all()->sortByDesc('created_at');
     
-            return view('mypage.edit',['shop' =>$shop]);
-            
+            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
+        
         }
          
 // 掲示板画面へ
         public function boardlist(Request $request)
         {
          
-            // $mylist = Auth::user();
             $shop= Shop::find($request->id);
             $board = new Board;
             $boards = $shop->boards()->get();
-            // $boards =Board::all()->sortByDesc('created_at');
-      
- 
+             
+            // 新規コメント順に表示
+            $boards=Board::all()->sortByDesc('created_at');
            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
             
@@ -321,6 +324,8 @@ class MyPageController extends Controller
 // 掲示板に投稿したコメントを削除する
         public function commentdelete(Request $request)
         {
+           
+            $board = new Board;   
             $board = Board::find($request->id);
             $user = Auth::user();
            
@@ -329,22 +334,20 @@ class MyPageController extends Controller
             {
                 return redirect('mypage/show');
             }
-       
             $board->delete();
-            
+         
+
             return redirect('mypage/show');
-
-
         }
 
 //編集した内容の更新とDBへの保存
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        /**
+         * Update the specified resource in storage.
+         *
+         * @param  \Illuminate\Http\Request  $request
+         * @param  int  $id
+         * @return \Illuminate\Http\Response
+         */
         public function update(Request $request)
         {
 
