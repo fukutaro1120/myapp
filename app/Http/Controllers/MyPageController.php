@@ -325,7 +325,8 @@ class MyPageController extends Controller
             $boards = $shop->boards()->get();
              
             // 新規コメント順に表示
-            // $boards=Board::all()->sortByDesc('created_at');
+             $boards=$shop->boards->sortByDesc('created_at');
+            // dd($boards);
            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
             
