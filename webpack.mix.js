@@ -12,7 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-mix.js('resources/js/index.js', 'public/js')
+    .js('resources/js/index.js', 'public/js')
+    .js('resources/js/accordion.js', 'public/js')
+    .js('resources/js/accordion.min.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
-    .sass('resources/sass/bak.scss', 'public/css');
+    .sass('resources/sass/bak.scss', 'public/css')
+    .sass('resources/sass/accordion.scss', 'public/css');

@@ -2,9 +2,9 @@
 
 @section('content')
 
+<br>
 
-
-  <div class="container mt-5 pt-5">
+  <div class="container mt-5 border">
     <table class="table table-hover">
       <thead>
          <tr>

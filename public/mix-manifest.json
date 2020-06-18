@@ -1,7 +1,10 @@
 {
+    "/js/accordion.js": "/js/accordion.js",
+    "/js/accordion.min.js": "/js/accordion.min.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/index.css": "/css/index.css",
     "/css/bak.css": "/css/bak.css",
+    "/css/accordion.css": "/css/accordion.css",
     "/js/index.js": "/js/index.js"
 }

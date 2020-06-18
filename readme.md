@@ -70,3 +70,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+<!-- 以下スライダーアコーディオン用で追加 -->
+# accordion
+lovely jquery plugin
+一个手风琴图片轮播jquery小插件(´・ω・)ﾉ
+
+## 使用方法
+在html文件head引入accordion.css、accordion.min.js（或accordion.js）
+再添加脚本
+<pre><code>
+<script type="text/javascript">
+    $(selector).accordion();
+</script>
+</code></pre>
+大功告成(´・ω・)ﾉ
+
+## 示例
+可以下载accordion_example文件夹进行尝试~
+
