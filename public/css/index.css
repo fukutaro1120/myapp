@@ -113,12 +113,47 @@
           animation-duration: 3s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 21px;
+  margin: 0;
+}
+
+.pict {
+  width: 30%;
+  margin-left: 3%;
+}
+
+.pict img {
+  width: 100%;
+  height: auto;
+}
+
+.box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.box:nth-child(even) .text {
+  text-align: right;
+}
+
+.box:nth-child(even) .pict {
+  margin-left: 0;
+  margin-right: 3%;
 }
 
 @-webkit-keyframes fadeIn {

@@ -274,7 +274,7 @@ class MyPageController extends Controller
         // }       
 
     
-// ユーザー別のマイリストに登録している店の削除
+// ユーザー別:登録している店の削除
         public function mylistdelete(Request $request)
         { 
             
@@ -325,6 +325,7 @@ class MyPageController extends Controller
         {
             $shop_requests = new ShopRequest;
             $requests= $shop_requests::all();
+            
           
             // dd($requests);
 
@@ -372,6 +373,7 @@ class MyPageController extends Controller
             $shop= Shop::find($request->id);
             $board = new Board;
             $boards = $shop->boards()->get();
+          
 
             $boards=$shop->boards->sortByDesc('created_at');
            
@@ -382,18 +384,18 @@ class MyPageController extends Controller
 // 掲示板に投稿したコメントを削除する
         public function commentdelete(Request $request)
         {
-           
             $board = new Board;   
             $board = Board::find($request->id);
             $user = Auth::user();
-           
+            
             // 他の人のコメントは消せないようにチェック
             if($board->user_id !== $user->id)
             {
                 return redirect('mypage/show');
             }
             $board->delete();
-         
+            
+        
 
             return redirect('mypage/show');
         }

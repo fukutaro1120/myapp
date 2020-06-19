@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-お店の掲示板画面
-
 <!-- エラー表示 -->
 @if(count($errors) > 0)
     <ul>
@@ -14,29 +11,32 @@
     </ul>
 @endif
                       
-<hr>
-以下掲示板
+<br>
+<div class="container mt-5">
+    <div class="row text-center">
+        <h1>『{{$shop->shop_name}}の掲示板』</h1>
+    </div>
+</div>
 
-<p>自分意外のコメントは削除できません</p>
 
-<div class="conatiner mx-auto ">
+<div class="conatiner mx-auto mt-1">
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10 mb-3 text-right">
             <a href=" {{ route('mypage.evaluation') . '?id=' . strval($shop->id) }} "> 
-                <button type="button" class="btn btn-outline-primary">新規コメントの送付</button>
+                <button type="button" class="btn btn-primary">コメントを送る</button>
             </a>
         <!-- <div class="col-1"></div> -->
         </div>
     </div>
 </div>
 
-<div class="container mx-auto border">
+<div class="container mx-auto">
     <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <table class="table text-center">
-                        <thead>
+                    <table class="table text-center ">
+                        <thead class="thead-light">
                             <tr>
                                 <th>投稿者</th>                          
                                 <th>コメント</th>
@@ -46,11 +46,11 @@
                         </thead>
                         <tbody>   
                             @foreach($boards as $board)
-                                    <tr>
-                                        <td >{{ $board->user->name}}</td>
-                                        <td >{{ \Str::limit( $board->comment,30) }}</td>
-                                        <td >{{ $board->created_at}}</td>
-                                        <td > <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a></td>
+                                    <tr class="">
+                                        <td class="align-middle" style="height:80px">{{ $board->user->name}}</td>
+                                        <td class="align-middle">{{ \Str::limit( $board->comment,30) }}</td>
+                                        <td class="align-middle">{{ $board->created_at}}</td>
+                                        <td class="align-middle"> <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a></td>
                                     </tr>
                             @endforeach
                         </tbody>
@@ -59,6 +59,7 @@
          </div>   
      </div>
   </div>
+  <p class="mt-2 mb-5 mr-5 pr-5 text-right">※他ユーザーのコメントは削除できません</p>
 
  
 

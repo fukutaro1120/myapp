@@ -22,14 +22,58 @@
             
 
   <div class="container text-center">
-          <h3 class="fade py-3"></h3>
-          <h3 class="fade py-4">人と店</h3>
-          <h3 class="fade py-4">店と人</h3>
-          <h3 class="fade py-4">人と人</h3>
-          <h3 class="fade py-4">お気に入りのお店を登録しよう</h3>
-          
-              
+          <!-- <h3 class="fade mb-3">人と店</h3>
+          <h3 class="fade mb-3">店と人</h3>
+          <h3 class="fade mb-3">人と人</h3> -->
+          <!-- <h3 class="fade my-5">お気に入りのお店を登録しよう</h3>            -->
   </div> 
+ 
+  <!-- ここから調整 -->
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+          <div class="box">
+              <div class="text">
+               <h3 class="fade mb-3">人と店</h3>
+                  <p>ここにコメント</p>
+              </div>
+                <div class="pict"><img src="/storage/img/mise.jpeg" alt=""></div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+          <div class="box">
+              <div class="text">
+               <h3 class="fade mb-3">人と店</h3>
+                  <p>ここにコメント</p>
+              </div>
+                <div class="pict"><img src="/storage/img/kanpai.jpeg" alt=""></div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+          <div class="box">
+              <div class="text">
+              <h3 class="fade mb-3">人と人</h3>
+                  <p>ここにコメント</p>
+              </div>
+                <div class="pict"><img src="/storage/img/sake.jpeg" alt=""></div>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- ここまで -->
+
 
     <!-- Opional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

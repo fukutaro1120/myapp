@@ -3,9 +3,9 @@
 @section('content')
 
 <br>
-ユーザー毎に登録している店の一覧を表示
 
-  <div class="container my-5  text-center">
+<div class="container my-5  text-center">
+  <h3>『マイページに登録している店の一覧表示です』</h3>
     <div class="row">
       <div class="col-2"></div>
     
@@ -27,7 +27,7 @@
               </td>
               <td>{{$shop->address }}</td>
               <td>
-              <a href="{{ route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" class="text-danger">削除</a>
+              <a href="{{ route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" class="text-danger font-weight-bold">削除</a>
               </td>
          </tr>
       @endforeach   
