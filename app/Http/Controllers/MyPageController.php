@@ -143,9 +143,6 @@ class MyPageController extends Controller
             return view('mypage.show', compact('shops'));
         }
 
-// 会員別のマイページ登録しているショップの一覧を取得
-
-
 
 // 店テーブルの一覧を表示する
         public function check(Request $request)
@@ -169,7 +166,6 @@ class MyPageController extends Controller
 
     
 //マイページに登録している店舗の詳細へ表示
-
         /**
          * Show the form for editing the specified resource.
          *
@@ -189,6 +185,7 @@ class MyPageController extends Controller
         {
 
             $shop= Shop::find($request->shop_id);
+            
             if(empty($shop)){
                 return redirect("mypage.show");
             }
@@ -207,7 +204,7 @@ class MyPageController extends Controller
             
         }
         
-//  マイページ店舗の一覧へ
+// マイページ店舗の一覧へ
         public function mypagelist(Request $request)
         { 
             
@@ -225,9 +222,7 @@ class MyPageController extends Controller
             
         }       
         
-// マイページのお店の削除
-     
-        
+// 全店登録店の削除
       /**
          * Remove the specified resource from storage.
          *
@@ -244,6 +239,60 @@ class MyPageController extends Controller
         
         
         }
+
+// ユーザー別の登録している店のリスト(画像なし)
+        public function mylistcheck(Request $request)
+        { 
+            $myshop = Auth::user();
+            
+            $mypageup = new MypageUp;  
+            $shops = Auth::user()->shops()->get();
+            
+            if(empty($shops)){
+                return redirect("mypage.show");
+            }
+
+            return view('mypage.mylistcheck',['shops' =>$shops]);
+            
+        }       
+
+// ユーザー別の登録している店のリスト
+        // public function mylist(Request $request)
+        // { 
+        //     $myshop = Auth::user();
+            
+        //     $mypageup = new MypageUp;  
+            
+        //     $shops = Auth::user()->shops()->get();
+            
+        //     if(empty($shops)){
+        //         return redirect("mypage.show");
+        //     }
+
+        //     return view('mypage.mylistcheck',['shops' =>$shops]);
+            
+        // }       
+
+    
+// ユーザー別のマイリストに登録している店の削除
+        public function mylistdelete(Request $request)
+        { 
+            
+            $shop= Shop::find($request->id);
+          
+            $mypageup = new MypageUp;  
+            $mypageup = MypageUp::where('shop_id',$shop->id)->first(); 
+            // $user = Auth::user();
+            // // dd($shop);
+            // dd($mypageup);
+
+            $mypageup->delete();
+                    
+            return redirect('mypage/mylistcheck');
+
+        }       
+
+
 
 
 // リクエストページ
@@ -276,6 +325,7 @@ class MyPageController extends Controller
         {
             $shop_requests = new ShopRequest;
             $requests= $shop_requests::all();
+          
             // dd($requests);
 
             return view ('mypage.requestlist',['requests' =>$requests]);
@@ -297,6 +347,7 @@ class MyPageController extends Controller
         public function boardup(Request $request)
         {
             $this->validate($request,Board::$rules);
+
             $shop= Shop::find($request->shop_id);
             $form = $request->all();      
          
@@ -309,8 +360,6 @@ class MyPageController extends Controller
             $board->save();
            
             $boards = $shop->boards()->get();
-            // dd($boards);
-            // $boards->shop_id->sortByDesc('created_at');
     
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
         
@@ -323,10 +372,8 @@ class MyPageController extends Controller
             $shop= Shop::find($request->id);
             $board = new Board;
             $boards = $shop->boards()->get();
-             
-            // 新規コメント順に表示
-             $boards=$shop->boards->sortByDesc('created_at');
-            // dd($boards);
+
+            $boards=$shop->boards->sortByDesc('created_at');
            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
             

@@ -6,10 +6,10 @@
 <div class="container">
 <div class="bg-rgba pt-5">
   <div class="row">
-   
+  
       @foreach($shops as $shop)
-
-            <div class="card col-md-3 shadow mb-5 p-0 ">
+  
+            <div class="card col-md-3 shadow mb-5 p-0">
               <div class="img_wrap">
                   <a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">
                     <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100">
@@ -42,7 +42,7 @@
                           </div>
                       </div> -->
 
-                      <div class="container mb-4 pl-0">
+                      <div class="container mb-1 pl-0">
                           <div class="row">
                               <!-- <div class="col-sm-6">
                                 <h5 class="font-weight-bold"></h5> -->
@@ -61,7 +61,9 @@
                       </div>
                   </div>
             </div>
+     
         @endforeach
+    
     </div>
 </div>
 </div>

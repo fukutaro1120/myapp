@@ -55,7 +55,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストを送る</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.mylistcheck') }}">マイページ登録店リスト</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエスト</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pl-3" href="{{ route('mypage.requestlist') }}">リクエストリスト</a>
@@ -107,4 +111,9 @@
         </main>
     </div>
 </body>
+<footer class="footer bg-white border-top">
+  <div class="containerc text-center">
+    <p class="text-muted py-auto m-0">Place sticky footer content here.</p>
+  </div>
+</footer>
 </html>

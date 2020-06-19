@@ -20,17 +20,20 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 {
 // トップページ
     Route::get('index', 'MyPageController@index')->name('mypage.index');
+
 // 新規登録
     Route::get('create', 'MyPageController@add')->name('mypage.add');
     Route::post('create', 'MyPageController@create')->name('mypage.create');
    
     Route::post('store', 'MyPageController@store')->name('mypage.store');
-// 登録店一覧
+
+// 全店：登録店一覧
     Route::get('show', 'MyPageController@show')->name('mypage.show');
     
 // 店の詳細
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
-// 削除
+
+// 全店：登録店舗削除
     Route::get('delete', 'MyPageController@delete')->name('mypage.delete');
     
     
@@ -39,21 +42,26 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('update', 'MyPageController@list')->name('mypage.list');
     Route::post('update', 'MyPageController@update')->name('mypage.update');
     
-// 登録店舗に画像を追加
-    // Route::post('update', 'MyPageController@shopphot')->name('mypage.shopphot');
+// マイページに店舗の更新
+    Route::get('mylistcheck', 'MyPageController@mylistcheck')->name('mypage.mylistcheck');
     
+//  マイページへ登録している店の削除  
+    Route::get('mylistdelete', 'MyPageController@mylistdelete')->name('mypage.mylistdelete');
+
 // マイページへ一覧からお店を登録
     Route::get('edit', 'MyPageController@up')->name('mypage.edit');
     Route::post('edit', 'MyPageController@mypageup')->name('mypage.mypageup');
     
-//  マイページへ登録している店一覧   
+//  マイページへ登録している店一覧(画像あり)   
     Route::get('mypagelist', 'MyPageController@mypagelist')->name('mypage.mypagelist');
+
+
 
 // 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
    
-// リクエストチェック画面
+// 全店リクエストチェック画面
     Route::get('requestlist', 'MyPageController@requestlist')->name('mypage.requestlist');
 
 

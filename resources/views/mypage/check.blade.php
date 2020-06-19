@@ -23,7 +23,7 @@
            <td>
              <a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> 
            / 
-           <a href="{{ route('mypage.delete') . '?id=' . strval($shop->id ) }}">削除</a></td>
+           <a href="{{ route('mypage.delete') . '?id=' . strval($shop->id ) }}"class="text-danger">削除</a></td>
          </tr>
       @endforeach   
     </tbody>
