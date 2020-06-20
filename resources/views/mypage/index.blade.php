@@ -9,7 +9,7 @@
     <h3 class="fade py-3"></h3>
     <h3 class="fade py-3"></h3>
     <h3 class="fade py-5"></h3>
-    <h1 class="fade py-5">飲musubi</h1>
+    <p class="fade py-5">飲musubi</p>
   </div> 
 </div> 
             
@@ -23,8 +23,8 @@
             <div class="col-1"></div>
             <div class="col-md-10 text-center">
                 <div class="content">
-                  <h2>飲musubiとは</h2>
-                    <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                  <h2 class="fadein">飲musubiとは</h2>
+                    <p class="fadein">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                     </p>
                 </div>
             <!-- </div>
@@ -43,7 +43,7 @@
 
 
 <!-- エフェクト画像 -->
-<div class="service bg-white">
+<div class="service fadein  bg-white">
     <div class="container py-3 mt-5 ">
       <div class="row">
         <div class="col-md-4">
@@ -77,15 +77,7 @@
   </div>
 </div>
 
-
 <!-- エフェクトここまで -->
-
-
- 
-  <!-- ここから -->
-
-
-
 
 
     <!-- Opional JavaScript -->
@@ -96,5 +88,8 @@
     <script src="{{ asset('js/index.js') }}" defer></script>
 
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <!-- 以下スクロール表示用 -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 
 @endsection

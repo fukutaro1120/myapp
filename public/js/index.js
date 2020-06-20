@@ -110,7 +110,19 @@ $(window).scroll(function () {
 $(".hover").mouseleave(function () {
   $(this).removeClass("hover");
 });
-Resources;
+$(function () {
+  $(window).scroll(function () {
+    $('.fadein').each(function () {
+      var elemPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      if (scroll > elemPos - windowHeight + 250) {
+        $(this).addClass('scrollin');
+      }
+    });
+  });
+});
 
 /***/ }),
 

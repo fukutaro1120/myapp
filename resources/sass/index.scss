@@ -4,14 +4,19 @@
   background-position: center;
   background-size: contain;
   width:100%;
-  height:650px;
-
+  height:800px;
+  font-family: 'HanziPen SC', sans-serif;
+  
 }
+.jumbotron p{ 
+  font-size: 3rem;
+}
+
 
 .bg-rgba {
   background-color:rgba(255,255,255,0.8);
   width: 100%;
-  height: 650px;
+  height: 800px;
   margin: auto;
   text-align: center;
  }
@@ -77,7 +82,7 @@
     animation: fadeIn ;
     animation-duration: 3s;
     animation-timing-function: ease;
-    animation-delay: 2.5s;
+    animation-delay: 1.3s;
     animation-iteration-count: 1;
     animation-fill-mode:forwards;
   
@@ -85,8 +90,34 @@
 
 // ここからサイトの説明
 .concept{
-  // background-color: rgba(128, 129, 133, 0.5);
+  font-family: 'HanziPen SC', sans-serif;
 }
+.service h2{
+  font-family: 'HanziPen SC', sans-serif;
+}
+// ここまで
+
+// ※スクロール表現
+/* 画面外にいる状態 */
+.fadein {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 500ms;
+	}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+  .navbar-nav {
+    font-family: 'HanziPen SC', sans-serif;
+  }
+  .navbar-brand  {
+    font-family: 'HanziPen SC', sans-serif;
+  }
+
 
 
   // .greeting h2 {

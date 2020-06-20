@@ -68,4 +68,6 @@
 
 
 <link href="{{ asset('css/bak.css') }}" rel="stylesheet">
+
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @endsection

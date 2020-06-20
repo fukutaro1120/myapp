@@ -18,4 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
     .sass('resources/sass/bak.scss', 'public/css')
-    .sass('resources/sass/accordion.scss', 'public/css');
+    .sass('resources/sass/accordion.scss', 'public/css')
+    .sass('resources/sass/font.scss', 'public/css');

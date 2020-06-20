@@ -13,6 +13,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+     <!-- スクロール表示用 -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -34,6 +37,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -110,10 +114,11 @@
             @yield('content')
         </main>
     </div>
+    
+    <footer class="footer bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted py-3 m-0">Place sticky footer content here.</p>
+        </div>
+    </footer>
 </body>
-<footer class="footer bg-white border-top">
-  <div class="containerc text-center">
-    <p class="text-muted py-auto m-0">Place sticky footer content here.</p>
-  </div>
-</footer>
 </html>

@@ -1,12 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);@charset "UTF-8";
-
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 .jumbotron {
-  background-image: url(/images/musubi.jpg?65cf2d4f77d4144eeb65bb8c0b4ea158);
+  background-image: url(../storage/img/musubi.jpg);
   background-position: center;
   background-size: contain;
   width: 100%;
   height: 800px;
-  font-family: "HanziPen SC", sans-serif;
+  font-family: 'HanziPen SC', sans-serif;
 }
 
 .jumbotron p {
@@ -127,38 +127,39 @@
 }
 
 .concept {
-  font-family: "HanziPen SC", sans-serif;
+  font-family: 'HanziPen SC', sans-serif;
 }
 
 .service h2 {
-  font-family: "HanziPen SC", sans-serif;
+  font-family: 'HanziPen SC', sans-serif;
 }
 
 /* 画面外にいる状態 */
-
 .fadein {
   opacity: 0.1;
-  transform: translate(0, 50px);
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all 500ms;
   transition: all 500ms;
 }
 
 /* 画面内に入った状態 */
-
 .fadein.scrollin {
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .navbar-nav {
-  font-family: "HanziPen SC", sans-serif;
+  font-family: 'HanziPen SC', sans-serif;
 }
 
 .navbar-brand {
-  font-family: "HanziPen SC", sans-serif;
+  font-family: 'HanziPen SC', sans-serif;
 }
 
 figure.snip1340 {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   position: relative;
   overflow: hidden;
   min-width: 230px;
@@ -171,13 +172,16 @@ figure.snip1340 {
 }
 
 figure.snip1340 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 figure.snip1340 img {
   opacity: 1;
   width: 100%;
+  -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
 
@@ -188,9 +192,11 @@ figure.snip1340:after {
   position: absolute;
   left: 0;
   bottom: 0;
-  content: "";
+  content: '';
   opacity: 0.75;
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -199,6 +205,7 @@ figure.snip1340 figcaption {
   top: 50%;
   left: 0;
   width: 100%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -239,6 +246,7 @@ figure.snip1340.hover img {
 
 figure.snip1340:hover:after,
 figure.snip1340.hover:after {
+  -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -246,6 +254,7 @@ figure.snip1340:hover figcaption h2,
 figure.snip1340.hover figcaption h2,
 figure.snip1340:hover figcaption p,
 figure.snip1340.hover figcaption p {
+  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
@@ -264,24 +273,22 @@ figure.snip1340.hover figcaption p {
   0% {
     opacity: 0;
   }
-
   /*アニメーション開始時は不透明度0%*/
   100% {
     opacity: 1;
   }
-
-  /*アニメーション終了時は不透明度100%*/}
+  /*アニメーション終了時は不透明度100%*/
+}
 
 @keyframes fadeIn {
   /*animetion-nameで設定した値を書く*/
   0% {
     opacity: 0;
   }
-
   /*アニメーション開始時は不透明度0%*/
   100% {
     opacity: 1;
   }
-
-  /*アニメーション終了時は不透明度100%*/}
-
+  /*アニメーション終了時は不透明度100%*/
+}
+/*# sourceMappingURL=index.css.map */

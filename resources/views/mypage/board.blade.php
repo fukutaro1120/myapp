@@ -64,7 +64,7 @@
  
 
 
-
+  <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
             
 @endsection
