@@ -35,7 +35,7 @@
     <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <table class="table text-center ">
+                    <table class="table text-center table-hover ">
                         <thead class="thead-light">
                             <tr>
                                 <th>投稿者</th>                          
@@ -46,8 +46,8 @@
                         </thead>
                         <tbody>   
                             @foreach($boards as $board)
-                                    <tr class="">
-                                        <td class="align-middle" style="height:80px">{{ $board->user->name}}</td>
+                                    <tr>
+                                        <td class="align-middle" style="height:60px">{{ $board->user->name}}</td>
                                         <td class="align-middle">{{ \Str::limit( $board->comment,30) }}</td>
                                         <td class="align-middle">{{ $board->created_at}}</td>
                                         <td class="align-middle"> <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a></td>

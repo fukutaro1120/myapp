@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);@charset "UTF-8";
 
 .jumbotron {
   background-image: url(/images/musubi.jpg?65cf2d4f77d4144eeb65bb8c0b4ea158);
@@ -113,28 +113,150 @@
           animation-duration: 3s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.box {
+.greeting h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.greeting .contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.greeting figure {
+  width: 100%;
+}
+
+figure.snip1340 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-width: 230px;
+  max-width: 315px;
+  max-height: 220px;
+  margin: 10px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+
+figure.snip1340 * {
+  box-sizing: border-box;
+  transition: all 0.6s ease;
+}
+
+figure.snip1340 img {
+  opacity: 1;
+  width: 100%;
+  transition: opacity 0.35s;
+}
+
+figure.snip1340:after {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  opacity: 0.75;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+figure.snip1340 figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+figure.snip1340 h2,
+figure.snip1340 p {
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+figure.snip1340 h2 {
+  padding: 0 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+figure.snip1340 p {
+  padding: 0 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+figure.snip1340 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.snip1340:hover img,
+figure.snip1340.hover img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+figure.snip1340:hover:after,
+figure.snip1340.hover:after {
+  transform: scaleX(1);
+}
+
+figure.snip1340:hover figcaption h2,
+figure.snip1340.hover figcaption h2,
+figure.snip1340:hover figcaption p,
+figure.snip1340.hover figcaption p {
+  transition-delay: 0.2s;
+}
+
+figure.snip1340:hover figcaption h2,
+figure.snip1340.hover figcaption h2 {
+  opacity: 1;
+}
+
+figure.snip1340:hover figcaption p,
+figure.snip1340.hover figcaption p {
+  opacity: 0.7;
+}
+
+Resources .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 40px;
 }
 
+.text {
+  text-align: center;
+}
+
 h3 {
-  font-size: 21px;
-  margin: 0;
+  text-align: center;
 }
 
 .pict {
-  width: 30%;
+  width: 40%;
   margin-left: 3%;
 }
 
@@ -149,11 +271,6 @@ h3 {
 
 .box:nth-child(even) .text {
   text-align: right;
-}
-
-.box:nth-child(even) .pict {
-  margin-left: 0;
-  margin-right: 3%;
 }
 
 @-webkit-keyframes fadeIn {
