@@ -121,23 +121,6 @@
           animation-fill-mode: forwards;
 }
 
-.greeting h2 {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.greeting .contents {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.greeting figure {
-  width: 100%;
-}
-
 figure.snip1340 {
   font-family: "Raleway", Arial, sans-serif;
   position: relative;
@@ -238,39 +221,6 @@ figure.snip1340.hover figcaption h2 {
 figure.snip1340:hover figcaption p,
 figure.snip1340.hover figcaption p {
   opacity: 0.7;
-}
-
-Resources .box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.text {
-  text-align: center;
-}
-
-h3 {
-  text-align: center;
-}
-
-.pict {
-  width: 40%;
-  margin-left: 3%;
-}
-
-.pict img {
-  width: 100%;
-  height: auto;
-}
-
-.box:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.box:nth-child(even) .text {
-  text-align: right;
 }
 
 @-webkit-keyframes fadeIn {

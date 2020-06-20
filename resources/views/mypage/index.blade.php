@@ -14,53 +14,69 @@
 </div> 
             
 <!-- サイト説明 -->
-<div class="container">
-  <section class="greeting">
-    <div class="content-wrapper">
-      <div class="contents">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-md-5">
-              <div class="content">
-                <h2>飲musubiとは</h2>
-                  <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  </p>
-              </div>
+<div class="concept">
+  <div class="container my-5">
+    <section class="greeting">
+      <div class="content-wrapper">
+        <div class="contents">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-md-10 text-center">
+                <div class="content">
+                  <h2>飲musubiとは</h2>
+                    <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                    </p>
+                </div>
+            <!-- </div>
+                <div class="col-md-5 text-center">
+                  <figure><img src="/storage/img/con.jpg" alt=""></figure>
+                </div> 
+                <div class="col-1"></div>-->
+            </div> 
           </div>
-              <div class="col-md-5 text-center">
-                <figure><img src="/storage/img/mise.jpeg" alt=""></figure>
-              </div> 
-               <div class="col-1"></div>
           </div>
-        </div>
-    </div> 
-  </section>             
+      </div> 
+    </section>              
+  </div> 
 </div> 
 <!-- サイト説明ここまで -->
 
 
-<!-- 確認 -->
-<figure class="snip1340"><img src="/storage/img/mise.jpeg" alt="sample28"/>
-  <figcaption>
-    <h2>人と店</h2>
-    <p>Nothing I do is my fault. </p>
-  </figcaption>
-  <a href="{{ route('mypage.show') }}"></a>
-</figure>
+<!-- エフェクト画像 -->
+<div class="service bg-white">
+    <div class="container py-3 mt-5 ">
+      <div class="row">
+        <div class="col-md-4">
+          <figure class="snip1340"><img src="/storage/img/noge.jpg" alt=""/>
+            <figcaption>
+              <h2>店</h2>
+              <p>People and stores</p>
+            </figcaption>
+            <a href="{{ route('mypage.show') }}"></a>
+          </figure>
+        </div>
 
-<figure class="snip1340 hover"><img src="/storage/img/kanpai.jpeg" alt="sample42"/>
-  <figcaption>
-    <h2>人と人</h2>
-    <p>A good compromise leaves everyone mad.</p>
-  </figcaption><a href="{{ route('mypage.show') }}"></a>
-</figure>
+        <div class="col-md-4">
+          <figure class="snip1340 "><img src="/storage/img/kanpai.jpeg" alt=""/>
+            <figcaption>
+              <h2>人</h2>
+              <p>People and people</p>
+            </figcaption><a href="{{ route('mypage.show') }}"></a>
+          </figure>
+        </div>
 
-<figure class="snip1340"><img src="/storage/img/sake.jpeg" alt="sample63"/>
-  <figcaption>
-    <h2>人と酒</h2>
-    <p>I liked things better when I didn't understand them.</p>
-  </figcaption><a href="{{ route('mypage.show') }}"></a>
-</figure>
+        <div class="col-md-4">
+        <figure class="snip1340"><img src="/storage/img/sake.jpeg" alt=""/>
+          <figcaption>
+            <h2>酒</h2>
+            <p>People and sake</p>
+          </figcaption><a href="{{ route('mypage.show') }}"></a>
+        </figure>
+        </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- エフェクトここまで -->
 
