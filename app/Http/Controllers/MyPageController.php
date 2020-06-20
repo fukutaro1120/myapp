@@ -361,6 +361,9 @@ class MyPageController extends Controller
             $board->save();
            
             $boards = $shop->boards()->get();
+
+
+            $boards=$shop->boards->sortByDesc('created_at');
     
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
         
