@@ -23,9 +23,11 @@
             <div class="col-1"></div>
             <div class="col-md-10 text-center">
                 <div class="content">
-                  <h2 class="fadein">飲musubiとは</h2>
-                    <p class="fadein">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    </p>
+                    <h1 class="fadein">飲musubiとは...</h1>
+                    <h4 class="fadein py-2">1杯目で店を楽しむ。</h4>
+                    <h4 class="fadein py-2">2杯目で人を楽しむ。</h4>
+                    <h4 class="fadein py-2">3杯目で酒を楽しむ。</h4>
+                    <p class="fadein py-2">そんな時間を楽しみたい、人と店と酒を「結ぶ」アプリです。</p>
                 </div>
             <!-- </div>
                 <div class="col-md-5 text-center">
