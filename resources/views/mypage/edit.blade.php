@@ -7,35 +7,44 @@
 <br>
 <br>
 
-<div class="container1 mt-5">
+<div class="container  mt-2">
+  <div class="row text-center">
+    <div class="col">
+      <h2>『行ってみたいと思ったら、マイページに追加しよう！』</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container1 my-3  p-5 bg-white border">
+  <h3>飲musubiメモ</h3>
   <section class="alternate-layout alternate-layout--reverse">
     <div class="alternate-layout__img">
       <img src="{{ asset('storage/image/'.$shop->image_path) }}" class=" d-block w-80" alt="...">
     </div>
     <div class="alternate-layout__detail">
-      <h2 class="alternate-layout__heading"> 『{{ $shop->shop_name}}』</h2>
-      <div class="alternate-layout__btn">
-      
-      </div>
+          <h2 class="alternate-layout__heading"> 『{{ $shop->shop_name}}』</h2>
+          <p>週末に行ってみよう</p>
+          <p>料理うまそうだったなー</p>
     </div>
   </section>
-   <section class="alternate-layout">
-  <div class="alternate-layout__img"> 
-    <img src="{{ asset('storage/image/'.$shop->image_path1) }}" class=" d-block w-80" alt="...">
-  </div>
-  <div class="alternate-layout__detail">
-    <h2 class="alternate-layout__heading">会社情報</h2>
-    <div class="alternate-layout__btn">
-      
+
+  <section class="alternate-layout">
+    <div class="alternate-layout__img"> 
+      <img src="{{ asset('storage/image/'.$shop->image_path1) }}" class=" d-block w-80" alt="...">
     </div>
+    <div class="alternate-layout__detail">
+          <h2 class="alternate-layout__heading">はやく会社終わらないかなー</h2>
+          <p>今日は久しぶに飲みにいける！</p>
+          <p>この店にいくの久しぶりだ！</p>
+    </div>
+  </section>
   </div>
- </section>
         
-</div>
+
 
 <!-- ここまで -->
 
-<div class="container mt-5 pt-5">
+<div class="container mt-2 pt-5">
     <div class="row">
 
       <div class="col-md-3">
@@ -78,14 +87,10 @@
           </div>
   </div>
 
-       
-
-
 <div class="container">
     <div class="row">
       <div class="col-7"></div>
         <div class="col--2">
-
     <!-- マイページへの追加 -->
             <form action="{{ action('MyPageController@mypageup') }}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -117,13 +122,13 @@
   <script src="{{ asset('js/accordion.min.js') }}"></script>
   
 
-
-    <div class="accordion mb-5">
+<!-- 以下アコーディイン処理 -->
+    <!-- <div class="accordion mb-5">
           <li><img src="{{ asset('storage/image/'.$shop->image_path) }}" class="image_size_m "></li>
           <li><img src="{{ asset('storage/image/'.$shop->image_path1) }}" class="image_size_m "></li>
           <li><img src="{{ asset('storage/image/'.$shop->image_path2) }}" class="image_size_m " ></li>
           <li><img src="{{ asset('storage/image/'.$shop->image_path3) }}" class="image_size_m " ></li>
-      </div>
+    </div> -->
   
 
       <script type="text/javascript">
