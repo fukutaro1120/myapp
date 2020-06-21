@@ -2,6 +2,39 @@
 
 @section('content')
 
+<!-- ここから調整 -->
+
+<br>
+<br>
+
+<div class="container1 mt-5">
+  <section class="alternate-layout alternate-layout--reverse">
+    <div class="alternate-layout__img">
+      <img src="{{ asset('storage/image/'.$shop->image_path) }}" class=" d-block w-80" alt="...">
+    </div>
+    <div class="alternate-layout__detail">
+      <h2 class="alternate-layout__heading"> 『{{ $shop->shop_name}}』</h2>
+      <div class="alternate-layout__btn">
+      
+      </div>
+    </div>
+  </section>
+   <section class="alternate-layout">
+  <div class="alternate-layout__img"> 
+    <img src="{{ asset('storage/image/'.$shop->image_path1) }}" class=" d-block w-80" alt="...">
+  </div>
+  <div class="alternate-layout__detail">
+    <h2 class="alternate-layout__heading">会社情報</h2>
+    <div class="alternate-layout__btn">
+      
+    </div>
+  </div>
+ </section>
+        
+</div>
+
+<!-- ここまで -->
+
 <div class="container mt-5 pt-5">
     <div class="row">
 
@@ -112,5 +145,6 @@
       </script>
 
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<link href="{{ asset('css/edit.css') }}" rel="stylesheet">
 
 @endsection

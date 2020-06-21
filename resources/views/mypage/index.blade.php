@@ -24,9 +24,9 @@
             <div class="col-md-10 text-center">
                 <div class="content">
                     <h1 class="fadein">飲musubiとは...</h1>
-                    <h4 class="fadein py-2">1杯目で店を楽しむ。</h4>
-                    <h4 class="fadein py-2">2杯目で人を楽しむ。</h4>
-                    <h4 class="fadein py-2">3杯目で酒を楽しむ。</h4>
+                    <h4 class="fadein py-2">1杯目で店と楽しむ。</h4>
+                    <h4 class="fadein py-2">2杯目で人と楽しむ。</h4>
+                    <h4 class="fadein py-2">3杯目で酒と楽しむ。</h4>
                     <p class="fadein py-2">そんな時間を楽しみたい、人と店と酒を「結ぶ」アプリです。</p>
                 </div>
             <!-- </div>
@@ -90,6 +90,7 @@
     <script src="{{ asset('js/index.js') }}" defer></script>
 
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font.css') }}" rel="stylesheet">
     <!-- 以下スクロール表示用 -->
     <script src="https://unpkg.com/scrollreveal"></script>
 

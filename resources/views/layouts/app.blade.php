@@ -43,7 +43,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.show') }}">登録店舗一覧</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.show') }}">店舗一覧</a>
                         </li>
 
                         <li class="nav-item">
@@ -63,7 +63,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエスト</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pl-3" href="{{ route('mypage.requestlist') }}">リクエストリスト</a>
