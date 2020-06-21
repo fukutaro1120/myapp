@@ -11,3 +11,22 @@ body {
   font-size: 0.8rem;
 }
 
+.img_wrap {
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+}
+
+.img_wrap img {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.img_wrap:hover img {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
