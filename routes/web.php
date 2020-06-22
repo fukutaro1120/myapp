@@ -61,7 +61,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 // 全店リクエストチェック画面
     Route::get('requestlist', 'MyPageController@requestlist')->name('mypage.requestlist');
  // リクエストの削除
-    Route::get('requestdelete', 'MyPageController@requestdelete')->name('mypage.requestdelete');
+    Route::post('requestdelete', 'MyPageController@requestdelete')->name('mypage.requestdelete');
 
 // 掲示板へのコメントを保存
     Route::get('evaluation', 'MyPageController@board')->name('mypage.evaluation');

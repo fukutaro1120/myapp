@@ -28,9 +28,11 @@
            <td>{{ $request->comment}}</td>
            <td>{{ $request->created_at}}</td>
            <td> 
-             <!-- アラート用IDの部分を追加 -->
-             <a href="{{ route('mypage.requestdelete') . '?id=' . strval($request->id ) }}"
-               class="text-danger font-weight-bold">削除</a>
+            
+             <form method="post" action="{{ route('mypage.requestdelete') . '?id=' . strval($request->id ) }}" id="delete_{{ $request->id}}" >
+              @csrf
+             <a href="#"class="btn btn-danger" data-id="{{ $request->id }}" onclick="deletePost(this);">削除</a>
+             </form>
            </td>
          </tr>
       @endforeach   
@@ -44,8 +46,19 @@
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
 
-
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+
+    <!-- 以下削除確認用 -->
+   <script>
+      function deletePost(e) 
+      {
+          'use strict';
+          if (confirm('本当に削除していいですか?')) {
+          document.getElementById('delete_' + e.dataset.id).submit();
+          }
+      }
+    </script>
+    <!-- ここまで -->
 
   
 
