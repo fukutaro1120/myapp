@@ -46,7 +46,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('mylistcheck', 'MyPageController@mylistcheck')->name('mypage.mylistcheck');
     
 //  マイページへ登録している店の削除  
-    Route::get('mylistdelete', 'MyPageController@mylistdelete')->name('mypage.mylistdelete');
+    Route::post('mylistdelete', 'MyPageController@mylistdelete')->name('mypage.mylistdelete');
 
 // マイページへ一覧からお店を登録
     Route::get('edit', 'MyPageController@up')->name('mypage.edit');

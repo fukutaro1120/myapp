@@ -30,7 +30,7 @@
 
 
 
-<div class="container">
+<div class="container border pt-3 my-3">
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10 text-center">
@@ -38,11 +38,11 @@
         </div>
         <div class="col-1"></div>
     </div>
-</div>
+<!-- </div> -->
 <div class="container mb-5 mt-1">
     <div class="row">
         <div class="col-1"></div>
-        <div class="container col-10 border">
+        <div class="container col-10 ">
            
           <div class="container mt-4 h5">
               <div class="row">
@@ -128,6 +128,7 @@
             </div>
             <div class="col-1"></div>
     </div>
+</div>
 </div>
 </form>
 

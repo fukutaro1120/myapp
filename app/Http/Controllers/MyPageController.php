@@ -345,10 +345,8 @@ class MyPageController extends Controller
 // 掲示板へのコメント送付画面にいく
         public function board(Request $request)
         { 
-
             $shop = Shop::find($request->id);
             
-
             return view('mypage.evaluation',['shop' =>$shop]);
             
         }
@@ -402,7 +400,7 @@ class MyPageController extends Controller
     {
         $boards = new Board;
         $shop= Board::find($request->id);  
-      
+
         return view('mypage.evaluationup',['boards' =>$boards,'shop' =>$shop]);
     }
 
@@ -421,7 +419,6 @@ class MyPageController extends Controller
                         $shop = Shop::find($board->shop_id);
                         $boards = new Board;
                         $boards = $shop->boards()->get();
-
                         $boards=$shop->boards->sortByDesc('created_at');
                         
                         return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);

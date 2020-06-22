@@ -64,7 +64,7 @@
      </div>
   </div>
   <hr>
-  <p class="mt-2 mb-5 mr-5 pr-5 text-right">※他ユーザーのコメントは削除できません</p>
+  <p class="mt-2 mb-5 mr-5 pr-5 text-right">※他ユーザーのコメントは「編集・削除」出来ません！</p>
 
  
 

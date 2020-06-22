@@ -8,6 +8,7 @@
     "/css/accordion.css": "/css/accordion.css",
     "/css/font.css": "/css/font.css",
     "/css/edit.css": "/css/edit.css",
+    "/js/delete.js": "/js/delete.js",
     "/js/index.js": "/js/index.js",
     "/js/request.js": "/js/request.js"
 }

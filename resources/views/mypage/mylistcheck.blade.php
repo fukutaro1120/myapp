@@ -30,7 +30,18 @@
               <td class="h5">{{$shop->category }}</td>
               <td class="h5">{{$shop->recommend }}</td>
               <td class="h6">
-              <a href="{{ route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" class="text-danger font-weight-bold">削除</a>
+
+              <!-- 削除のモーダルここから -->
+            
+
+              <form method="post" action=" {{route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" id="delete_{{ $shop->id}}" >
+              @csrf
+              <a href="#" class="btn btn-danger" data-id="{{ $shop->id }}" onclick="deletePost(this);">削除</a>   
+              </form>  
+              <!-- <a href="  route('mypage.mylistdelete') . '?id=' . strval($shop->id ) " class="text-danger font-weight-bold">削除</a>-->
+
+              <!-- ここまで -->
+
               </td>
          </tr>
       @endforeach   
@@ -47,6 +58,21 @@
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
 
+    <script src="{{ asset('js/delete.js') }}" defer></script>
+  
+
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+
+    <!-- 以下モーダル -->
+ 
+    <script>
+      function deletePost(e) 
+      {
+          'use strict';
+          if (confirm('本当に削除していいですか?')) {
+          document.getElementById('delete_' + e.dataset.id).submit();
+          }
+      }
+    </script>
 
 @endsection
