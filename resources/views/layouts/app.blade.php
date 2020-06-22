@@ -22,6 +22,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+     <!-- font -->
+    <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
     
 </head>
@@ -53,7 +55,7 @@
                         <li class="nav-item">
                             <a class="nav-link pl-3" href="{{ route('mypage.mylistcheck') }}">マイページ登録店リスト</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
                         </li>

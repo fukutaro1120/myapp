@@ -2,9 +2,8 @@
 
 @section('content')
 
-updateです<br>
-運営のみ使用できるページ<br>
-登録している店の更新ができる
+<br>
+<br>
 
 <form action="{{ action('MyPageController@update') }}" method="post" enctype="multipart/form-data">
 @csrf

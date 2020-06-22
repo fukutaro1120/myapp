@@ -4,9 +4,9 @@
 
 <br>
 
-  <div class="container mt-5 border">
+  <div class="container mt-5 px-0 border">
     <table class="table table-hover">
-      <thead>
+      <thead class="thead-light">
          <tr>
               <th scope="col">No</th>
               <th scope="col">店舗名</th>

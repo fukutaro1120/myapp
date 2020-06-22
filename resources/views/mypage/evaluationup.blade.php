@@ -14,9 +14,9 @@
         <div class="col-10">
           <div class="container border mt-5">  
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 px-0">
                 <div class="form-group text-center">
-                  <h1 class="p-3 mb-2 bg-primary text-white ">コメントの編集画面です</h1>
+                  <h1 class="p-3 mb-2 bg-primary text-white ">コメント編集画面です</h1>
                 </div>
                   
                     <!-- エラー表示 -->

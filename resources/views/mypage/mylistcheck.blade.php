@@ -7,15 +7,16 @@
 <div class="container my-5  text-center">
   <h3>『マイページに登録している店の一覧表示です』</h3>
     <div class="row">
-      <div class="col-2"></div>
+      <!-- <div class="col-2"></div> -->
     
-  <div class="col-8 border">
+  <div class="col-12 border px-0">
     <table class="table table-hover">
-      <thead >
+      <thead class="thead-light">
          <tr>
-              <!-- <th scope="col">No</th> -->
               <th>店舗名</th>
               <th>住所</th>
+              <th>ジャンル</th>
+              <th>おすすめ</th>
               <th>アクション</th>
           </tr>
       </thead>
@@ -26,6 +27,8 @@
                 <a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">{{ $shop->shop_name}}</a>
               </td>
               <td class="h5">{{$shop->address }}</td>
+              <td class="h5">{{$shop->category }}</td>
+              <td class="h5">{{$shop->recommend }}</td>
               <td class="h6">
               <a href="{{ route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" class="text-danger font-weight-bold">削除</a>
               </td>
@@ -34,7 +37,7 @@
     </tbody>
   </table>
 </div>
-  <div class="col-2"></div>
+  <!-- <div class="col-2"></div> -->
   </div>
   </div>
   

@@ -415,7 +415,7 @@ class MyPageController extends Controller
         $board= Board::find($request->id);
         $user = Auth::user();
 
-                // 投稿したユーザーなのか確認
+                // 投稿したユーザーか確認
                     if($board->user_id !== $user->id)
                     {
                         $shop = Shop::find($board->shop_id);
