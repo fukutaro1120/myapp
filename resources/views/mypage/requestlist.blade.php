@@ -14,6 +14,7 @@
               <th scope="col">年齢</th>
               <th scope="col">コメント</th>
               <th scope="col">投稿日</th>
+              <th scope="col">アクション</th>
           </tr>
       </thead>
     <tbody>
@@ -26,6 +27,7 @@
            <td>{{ $request->age}}</td>
            <td>{{ $request->comment}}</td>
            <td>{{ $request->created_at}}</td>
+           <td> <a href="{{ route('mypage.requestdelete') . '?id=' . strval($request->id ) }}"class="text-danger font-weight-bold ">削除</a></td>
          </tr>
       @endforeach   
     </tbody>

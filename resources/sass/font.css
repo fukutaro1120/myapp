@@ -1,15 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 .navbar-nav {
   font-family: 'HanziPen SC', sans-serif;
+  font-weight: bold;
 }
 
 .navbar-brand {
   font-family: 'HanziPen SC', sans-serif;
+  font-weight: bold;
 }
 
 body {
   font-family: 'HanziPen SC', sans-serif;
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .img_wrap {

@@ -19,9 +19,6 @@ class CreateBoardsTable extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->string('comment',50);
             $table->timestamps();
-
-
-
            
         });
     }

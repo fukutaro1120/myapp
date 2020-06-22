@@ -63,6 +63,8 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
    
 // 全店リクエストチェック画面
     Route::get('requestlist', 'MyPageController@requestlist')->name('mypage.requestlist');
+ // リクエストの削除
+    Route::get('requestdelete', 'MyPageController@requestdelete')->name('mypage.requestdelete');
 
 
 // 掲示板へのコメントを保存
@@ -72,6 +74,10 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 // 掲示板へ 
     Route::get('board', 'MyPageController@boardlist')->name('mypage.boardlist');
     
+// 掲示板のコメントの編集
+    Route::get('commentupdate', 'MyPageController@commentupdate')->name('mypage.commentupdate');
+    Route::post('commentupdate', 'MyPageController@commentsave')->name('mypage.commentsave');
+
 // 掲示板のコメントを削除
     Route::get('commentdelete', 'MyPageController@commentdelete')->name('mypage.commentdelete');
 

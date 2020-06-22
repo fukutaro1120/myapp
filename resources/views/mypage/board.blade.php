@@ -50,7 +50,11 @@
                                         <td class="align-middle" style="height:60px">{{ $board->user->name}}</td>
                                         <td class="align-middle">{{ \Str::limit( $board->comment,30) }}</td>
                                         <td class="align-middle">{{ $board->created_at}}</td>
-                                        <td class="align-middle"> <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a></td>
+                                        <td class="align-middle">
+                                             <a href="{{ route('mypage.commentupdate') . '?id=' . strval($board->id ) }}">編集</a>
+                                             /
+                                             <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a>
+                                        </td>
                                     </tr>
                             @endforeach
                         </tbody>

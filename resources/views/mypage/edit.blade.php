@@ -54,9 +54,8 @@
 <!-- 拡大画像ここまで -->
 
 
-<!-- ここから -->
-
-<div class="container1 my-3  p-5 bg-white border">
+<!-- ここからメモ書き風 -->
+<div class="container1 my-3 shadow p-5 bg-white border">
   <h3>飲musubiメモ</h3>
     <section class="alternate-layout alternate-layout--reverse">
         <div class="alternate-layout__img">
@@ -64,8 +63,8 @@
         </div>
         <div class="alternate-layout__detail">
               <h2 class="alternate-layout__heading"> 『{{ $shop->shop_name}}』</h2>
-              <p>週末に行ってみよう</p>
-              <p>料理うまそうだったなー</p>
+              <h5>・店名：{{ $shop->shop_name}}</h5>    
+              <h5>・住所：{{ $shop->address}}</h5>    
         </div>
     </section>
 
@@ -74,29 +73,29 @@
           <img src="{{ asset('storage/image/'.$shop->image_path1) }}" class=" d-block w-80" alt="...">
         </div>
         <div class="alternate-layout__detail">
-              <h2 class="alternate-layout__heading">はやく会社終わらないかなー</h2>
-              <p>今日は久しぶに飲みにいける！</p>
-              <p>この店にいくの久しぶりだ！</p>
+              <!-- <h2 class="alternate-layout__heading">はやく会社終わらないかなー</h2> -->
+              <h5>・ジャンル：{{ $shop->category}}</h5>
+              <h5>・おすすめ：{{ $shop->recommend}}</h5>
         </div>
     </section>
 </div>
-<!-- ここまで -->
+<!-- ここまでメモ -->
 
 <!-- 店詳細 -->
-<div class="container my-3">
+ <div class="container  my-3 font-weight-bold">
   <div class="row">
     <div class="col-2"></div>
     <div class="col-8">
       <ul class="list-group list-group-flush">
-          <li class="list-group-item">・店名：{{ $shop->shop_name}}</li>
-          <li class="list-group-item">・住所：{{ $shop->address}}</li>
-          <li class="list-group-item">・ジャンル：{{ $shop->category}}</li>
-          <li class="list-group-item">・おすすめ：{{ $shop->recommend}}</li>
+          <li class="list-group-item">・店名：{{$shop->shop_name }}</li>
+          <li class="list-group-item">・住所：{{ $shop->address }}</li>
+          <li class="list-group-item">・ジャンル：{{ $shop->category }}</li>
+          <li class="list-group-item">・おすすめ：{{$shop->recommend }}</li>
       </ul>
     </div>
     <div class="col-2"></div>
   </div>
-</div>
+</div> 
 <!-- 詳細ここまで -->
 
 <!-- マイページ追加ボタン -->
