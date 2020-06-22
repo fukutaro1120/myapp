@@ -313,7 +313,6 @@ class MyPageController extends Controller
             $shop_requests->user_id = Auth::id();
             $shop_requests->fill($form)->save();
 
-            
             return view ('mypage.request');
         }
 
@@ -325,8 +324,9 @@ class MyPageController extends Controller
             
             // dd($requests);
 
-            return view ('mypage.requestlist',['requests' =>$requests]);
+            $requests=$requests->sortByDesc('created_at');
 
+            return view ('mypage.requestlist',['requests' =>$requests]);
         }
 
 // リクエストの削除
@@ -337,6 +337,7 @@ class MyPageController extends Controller
             $requests->delete(); 
             
             $requests = $shop_requests->all();
+            $requests=$requests->sortByDesc('created_at');
             
             return view ('mypage.requestlist',['requests' =>$requests]);
 
