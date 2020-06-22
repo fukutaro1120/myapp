@@ -27,7 +27,11 @@
            <td>{{ $request->age}}</td>
            <td>{{ $request->comment}}</td>
            <td>{{ $request->created_at}}</td>
-           <td> <a href="{{ route('mypage.requestdelete') . '?id=' . strval($request->id ) }}"class="text-danger font-weight-bold ">削除</a></td>
+           <td> 
+             <!-- アラート用IDの部分を追加 -->
+             <a href="{{ route('mypage.requestdelete') . '?id=' . strval($request->id ) }}"
+               class="text-danger font-weight-bold">削除</a>
+           </td>
          </tr>
       @endforeach   
     </tbody>
@@ -42,5 +46,7 @@
 
 
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+
+  
 
 @endsection

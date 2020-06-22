@@ -47,8 +47,8 @@
                         <tbody>   
                             @foreach($boards as $board)
                                     <tr>
-                                        <td class="align-middle" style="height:60px">{{ $board->user->name}}</td>
-                                        <td class="align-middle">{{ \Str::limit( $board->comment,30) }}</td>
+                                        <td class="align-middle h5" style="height:60px">{{ $board->user->name}}</td>
+                                        <td class="align-middle h5">{{ \Str::limit( $board->comment,30) }}</td>
                                         <td class="align-middle">{{ $board->created_at}}</td>
                                         <td class="align-middle">
                                              <a href="{{ route('mypage.commentupdate') . '?id=' . strval($board->id ) }}">編集</a>

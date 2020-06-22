@@ -48,7 +48,7 @@
                                   <div class="col-md-3"></div>
                                       <div class="col-md-9"> 
                                           {{ csrf_field() }}
-                                          <input type="hidden" value="{{ $shop->id }}" name="shop_id">
+                                          <input type="hidden" value="{{ $shop->id }}" name="id">
                                           <input type="submit" class="btn btn-primary">
                                       </div>
                                 </div>

@@ -22,11 +22,11 @@
     <tbody>
       @foreach($shops as $shop)
          <tr>
-              <td>
+              <td class="h5">
                 <a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">{{ $shop->shop_name}}</a>
               </td>
-              <td>{{$shop->address }}</td>
-              <td>
+              <td class="h5">{{$shop->address }}</td>
+              <td class="h6">
               <a href="{{ route('mypage.mylistdelete') . '?id=' . strval($shop->id ) }}" class="text-danger font-weight-bold">削除</a>
               </td>
          </tr>

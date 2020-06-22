@@ -6,17 +6,28 @@
 <br>
 
 
-<form action="{{ action('MyPageController@request') }}" method="post">
-@csrf
 
-<!-- エラー表示 -->
-@if(count($errors) > 0)
+<form action="{{ action('MyPageController@request') }}" method="post">
+    @csrf
+    
+    <!-- エラー表示 -->
+    @if(count($errors) > 0)
     <ul>
-      @foreach($errors->all() as $e )
-      <li>{{ $e }}</li>
-      @endforeach
+        @foreach($errors->all() as $e )
+        <li>{{ $e }}</li>
+        @endforeach
     </ul>
-@endif
+    @endif
+    
+    <!-- フラッシュメッセージ -->
+    @if (session()->has('flash_message'))
+                <div class="alert alert-info mb-3 flash_message">
+                    {{ session('flash_message') }}
+                </div>
+            @endif
+    
+
+
 
 
 <div class="container">
@@ -33,7 +44,7 @@
         <div class="col-1"></div>
         <div class="container col-10 border">
            
-          <div class="container mt-4">
+          <div class="container mt-4 h5">
               <div class="row">
                   <div class="col-md-3">
                       <label >店舗名</label>
@@ -45,7 +56,7 @@
                   </div>
               </div>
           </div>
-          <div class="container">
+          <div class="container h5">
               <div class="row">
                   <div class="col-md-3">
                       <label >住所</label>
@@ -58,7 +69,7 @@
               </div>
           </div>
         
-          <div class="container">
+          <div class="container h5">
               <div class="row">
                   <div class="col-md-3">
                       <label >性別</label>
@@ -78,7 +89,7 @@
               </div>
           </div>
         
-          <div class="container">
+          <div class="container h5">
               <div class="row">
                   <div class="col-md-3">
                       <label >年齢</label>
@@ -91,7 +102,7 @@
               </div>
           </div>
          
-          <div class="container">
+          <div class="container h5">
               <div class="row">
                 <div class="col-md-3">
                   <label for="exampleFormControlTextarea1">店のおすすめ</label>
@@ -103,13 +114,13 @@
                 </div>
               </div>
           </div>
-                <div class="form-group">
+                <div class="form-group ">
                   <div class="container text-right">
                       <div class="row">
                         <div class="col-md-3"></div>
                             <div class="col-md-7">
                                 {{ csrf_field() }}
-                                <input type="submit" class="btn btn-primary">
+                                <input type="submit" class="btn btn-primary ">
                             </div>
                       </div>
                   </div>
@@ -121,5 +132,8 @@
 </form>
 
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+
+<script src="{{ asset('js/request.js') }}" defer></script>
+
 
 @endsection

@@ -289,9 +289,6 @@ class MyPageController extends Controller
 
         }       
 
-
-
-
 // リクエストページ
         public function req(Request $request)
         {
@@ -313,7 +310,7 @@ class MyPageController extends Controller
             $shop_requests->user_id = Auth::id();
             $shop_requests->fill($form)->save();
 
-            return view ('mypage.request');
+            return redirect ('mypage/request')->with('flash_message', 'リクエストが送信されました');
         }
 
 // リクエスト一覧
@@ -411,22 +408,25 @@ class MyPageController extends Controller
      public function commentsave(Request $request)
      {
         // dd($request);
-        //   $shop= Shop::find($request->id);
-        $shop = $request->all();   
-          dd($shop);
-       
-        $board = new Board;
-        $board= Board::where('shop_id', $request->shop_id)->first();
-        dd($board);
+        $board= Board::find($request->id);
+        // dd($shop);
+
+        // $board= Board::where('shop_id', $shop->id)->first();
+        // dd($board);
         $board->comment = $request->body;
-        $board->shop_id =$request->shop_id;
-        $board->shop_name =$shop->shop_name;
-        
-        
+    
         $board->save();
+        $shop = Shop::find($board->shop_id);
+        $boards = new Board;
+        $boards = $shop->boards()->get();
+          
+          
+        $boards=$shop->boards->sortByDesc('created_at');
+           
+        return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
               
         //  return view('mypage.board',['boards' => Board::where("shop_id", $request->shop_id)->get(),'shop' =>$board ]);
-         return view('mypage.board',['boards' =>$board,'shop' =>$shop]);
+        //  return view('mypage.board',['boards' =>$board,'shop' =>$shop]);
 
      }
 
