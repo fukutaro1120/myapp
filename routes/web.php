@@ -34,7 +34,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
 
 // 全店：登録店舗削除
-    Route::get('delete', 'MyPageController@delete')->name('mypage.delete');
+    Route::post('delete', 'MyPageController@delete')->name('mypage.delete');
      
 // 登録店舗一覧と更新
     Route::get('check', 'MyPageController@check')->name('mypage.check');
