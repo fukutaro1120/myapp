@@ -304,7 +304,6 @@ class MyPageController extends Controller
             $shop_requests = new ShopRequest;
             $form = $request->all();
             
-            
             unset($form[' _token']);
 
             $shop_requests->user_id = Auth::id();
@@ -312,6 +311,7 @@ class MyPageController extends Controller
 
             return redirect ('mypage/request')->with('flash_message', 'リクエストが送信されました');
         }
+
 
 // リクエスト一覧
         public function requestlist(Request $request)
@@ -325,6 +325,7 @@ class MyPageController extends Controller
 
             return view ('mypage.requestlist',['requests' =>$requests]);
         }
+
 
 // リクエストの削除
         public function requestdelete(Request $request)
@@ -341,7 +342,6 @@ class MyPageController extends Controller
         }
 
 
-
 // 掲示板へのコメント送付画面にいく
         public function board(Request $request)
         { 
@@ -352,6 +352,7 @@ class MyPageController extends Controller
             return view('mypage.evaluation',['shop' =>$shop]);
             
         }
+
 
 // 掲示板へコメントを保存する
         public function boardup(Request $request)
@@ -378,6 +379,7 @@ class MyPageController extends Controller
         
         }
          
+
 // 掲示板画面
         public function boardlist(Request $request)
         {
@@ -394,7 +396,8 @@ class MyPageController extends Controller
             
         }
 
-// 掲示板のコメント編集送付画面へ??????????????????????????????????????????????????????????????????????
+        
+// 掲示板のコメント編集送付画面へ
     public function commentupdate(Request $request)
     {
         $boards = new Board;
@@ -404,35 +407,40 @@ class MyPageController extends Controller
     }
 
 
-// 掲示板のコメントの編集内容を上書き保存???????????????????????????????????????????????????????????????
+// 掲示板のコメントの編集内容を上書き保存
      public function commentsave(Request $request)
      {
-        // dd($request);
+        $this->validate($request,Board::$rules);
+      
         $board= Board::find($request->id);
-        // dd($shop);
+        $user = Auth::user();
 
-        // $board= Board::where('shop_id', $shop->id)->first();
-        // dd($board);
+                // 投稿したユーザーなのか確認
+                    if($board->user_id !== $user->id)
+                    {
+                        $shop = Shop::find($board->shop_id);
+                        $boards = new Board;
+                        $boards = $shop->boards()->get();
+
+                        $boards=$shop->boards->sortByDesc('created_at');
+                        
+                        return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
+                    }
+        
         $board->comment = $request->body;
-    
         $board->save();
+
         $shop = Shop::find($board->shop_id);
         $boards = new Board;
         $boards = $shop->boards()->get();
-          
-          
+
         $boards=$shop->boards->sortByDesc('created_at');
            
         return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
               
-        //  return view('mypage.board',['boards' => Board::where("shop_id", $request->shop_id)->get(),'shop' =>$board ]);
-        //  return view('mypage.board',['boards' =>$board,'shop' =>$shop]);
-
      }
 
 
-
-      
 // 掲示板に投稿したコメントを削除する
         public function commentdelete(Request $request)
         {
@@ -447,7 +455,14 @@ class MyPageController extends Controller
             }
             $board->delete();
 
-            return redirect('mypage/show');
+            $shop = Shop::find($board->shop_id);
+            $boards = new Board;
+            $boards = $shop->boards()->get();
+              
+            $boards=$shop->boards->sortByDesc('created_at');
+               
+            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
+                
         }
 
 //編集した内容の更新とDBへの保存
