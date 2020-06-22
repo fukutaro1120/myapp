@@ -63,8 +63,7 @@
 
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
-    <!-- 以下モーダル -->
- 
+    <!-- 以下削除確認用 -->
     <script>
       function deletePost(e) 
       {

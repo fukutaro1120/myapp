@@ -41,7 +41,8 @@
                                 <th>投稿者</th>                          
                                 <th>コメント</th>
                                 <th>投稿日</th>
-                                <th >削除</th>
+                                <th>編集</th>
+                                <th>削除</th>
                             </tr>
                         </thead>
                         <tbody>   
@@ -52,8 +53,12 @@
                                         <td class="align-middle">{{ $board->created_at}}</td>
                                         <td class="align-middle">
                                              <a href="{{ route('mypage.commentupdate') . '?id=' . strval($board->id ) }}">編集</a>
-                                             /
-                                             <a href="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" style="color: #F33;">削除</a>
+                                        </td>
+                                        <td>
+                                             <form method="POST" action="{{ route('mypage.commentdelete') . '?id=' . strval($board->id ) }}" id="delete_{{ $board->id}}" >
+                                             @csrf
+                                             <a href="#" class="btn btn-danger" data-id="{{ $board->id }}" onclick="deletePost(this);">削除</a>
+                                             </form>
                                         </td>
                                     </tr>
                             @endforeach
@@ -66,10 +71,22 @@
   <hr>
   <p class="mt-2 mb-5 mr-5 pr-5 text-right">※他ユーザーのコメントは「編集・削除」出来ません！</p>
 
- 
-
-
   <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
-            
+   <!-- 以下削除確認用 -->
+   <script>
+      function deletePost(e) 
+      {
+          'use strict';
+          if (confirm('本当に削除していいですか?')) {
+          document.getElementById('delete_' + e.dataset.id).submit();
+          }
+      }
+    </script>
+    <!-- ここまで -->
+       
+  
+
+
+
 @endsection

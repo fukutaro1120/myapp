@@ -35,8 +35,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 
 // 全店：登録店舗削除
     Route::get('delete', 'MyPageController@delete')->name('mypage.delete');
-    
-    
+     
 // 登録店舗一覧と更新
     Route::get('check', 'MyPageController@check')->name('mypage.check');
     Route::get('update', 'MyPageController@list')->name('mypage.list');
@@ -55,8 +54,6 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
 //  マイページへ登録している店一覧(画像あり)   
     Route::get('mypagelist', 'MyPageController@mypagelist')->name('mypage.mypagelist');
 
-
-
 // 新規登録のリクエスト
     Route::get('request', 'MyPageController@req')->name('mypage.req');
     Route::post('request', 'MyPageController@request')->name('mypage.request');
@@ -65,7 +62,6 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('requestlist', 'MyPageController@requestlist')->name('mypage.requestlist');
  // リクエストの削除
     Route::get('requestdelete', 'MyPageController@requestdelete')->name('mypage.requestdelete');
-
 
 // 掲示板へのコメントを保存
     Route::get('evaluation', 'MyPageController@board')->name('mypage.evaluation');
@@ -79,7 +75,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::post('commentupdate', 'MyPageController@commentsave')->name('mypage.commentsave');
 
 // 掲示板のコメントを削除
-    Route::get('commentdelete', 'MyPageController@commentdelete')->name('mypage.commentdelete');
+    Route::post('commentdelete', 'MyPageController@commentdelete')->name('mypage.commentdelete');
 
 });
 
