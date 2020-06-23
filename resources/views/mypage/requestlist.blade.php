@@ -3,9 +3,9 @@
 @section('content')
 
 <br>
-  <div class="container mt-5  border text-center">
+  <div class="container mt-5 px-0 border text-center">
     <table class="table table-hover">
-      <thead>
+      <thead class="thead-light ">
          <tr>
               <th scope="col">id</th>
               <th scope="col">店名</th>
@@ -14,7 +14,7 @@
               <th scope="col">年齢</th>
               <th scope="col">コメント</th>
               <th scope="col">投稿日</th>
-              <th scope="col">アクション</th>
+              <th scope="col">削除</th>
           </tr>
       </thead>
     <tbody>

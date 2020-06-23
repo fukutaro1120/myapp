@@ -103,12 +103,21 @@
     <div class="row">
       <div class="col-9"></div>
         <div class="col--2">
+          @if ( count(Auth::user()->mypageups->where("shop_id", $shop->id)) != 0 )
+            <form action="{{ action('MyPageController@mypageup_delete') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                {{ csrf_field() }}
+                <input type="hidden" value="{{ $shop->id }}" name="shop_id">
+                <input type="submit" class="btn btn-primary" value="マイページから削除">
+            </form>
+          @else
             <form action="{{ action('MyPageController@mypageup') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 {{ csrf_field() }}
                 <input type="hidden" value="{{ $shop->id }}" name="shop_id">
                 <input type="submit" class="btn btn-primary" value="マイページに追加">
             </form>
+          @endif
         </div>
     </div>
   </div>

@@ -11,6 +11,8 @@
               <th scope="col">No</th>
               <th scope="col">店舗名</th>
               <th scope="col">住所</th>
+              <th scope="col">ジャンル</th>
+              <th scope="col">おすすめ</th>
               <th scope="col">編集</th>
               <th scope="col">削除</th>
           </tr>
@@ -21,6 +23,8 @@
             <th>{{ $shop->id}}</th>
               <td><a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">{{ $shop->shop_name}}</a></td>
               <td>{{$shop->address }}</td>
+              <td>{{$shop->category }}</td>
+              <td>{{$shop->recommend }}</td>
               <td>
                 <a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> 
               </td>

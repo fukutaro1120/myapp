@@ -12,7 +12,7 @@
       <div class="col-1"></div>
 
         <div class="col-10">
-          <div class="container border mt-5">  
+          <div class="container border my-5">  
             <div class="row">
               <div class="col-md-12 px-0">
                 <div class="form-group text-center">
@@ -49,7 +49,7 @@
                                       <div class="col-md-9"> 
                                           {{ csrf_field() }}
                                           <input type="hidden" value="{{ $shop->id }}" name="id">
-                                          <input type="submit" class="btn btn-primary">
+                                          <input type="submit" class="btn btn-primary" value="更新">
                                       </div>
                                 </div>
                             </div>

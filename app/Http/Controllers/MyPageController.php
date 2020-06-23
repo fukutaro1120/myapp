@@ -9,6 +9,7 @@ use App\Models\Shop;
 use App\Models\ShopRequest;
 use App\Models\MypageUp;
 use App\Models\Board;
+use App\User;
 
 
 
@@ -76,22 +77,22 @@ class MyPageController extends Controller
         }
 
     // 画像2
-                if(isset($form['image2'])) {
+         if(isset($form['image2'])) {
                 
-                    $path = $request->file('image2')->store('public/image');
-                    $shop->image_path2 = basename($path);
-                }else{
-                    $shop->image_path2 = null;
-                }
+            $path = $request->file('image2')->store('public/image');
+            $shop->image_path2 = basename($path);
+         }else{
+            $shop->image_path2 = null;
+        }
             
     // 画像3
-                 if(isset($form['image3'])) {
+        if(isset($form['image3'])) {
                         
-                    $path = $request->file('image3')->store('public/image');
-                     $shop->image_path3 = basename($path);
-                }else{
-                    $shop->image_path3 = null;
-                }
+            $path = $request->file('image3')->store('public/image');
+            $shop->image_path3 = basename($path);
+        }else{
+            $shop->image_path3 = null;
+        }
 
 
         unset($form['_token']);
@@ -109,7 +110,6 @@ class MyPageController extends Controller
         
     }
 
-    
 //クリエイトで入力された内容を受け取る
 
     /**
@@ -149,7 +149,7 @@ class MyPageController extends Controller
         {
             // 登録しているお店の一覧を表示、それを表示
             $shops = DB::table('shops')
-            ->select('id','shop_name','address')
+            ->select('id','shop_name','address','category','recommend')
             ->get();
 
             return view('mypage.check',compact('shops'));
@@ -183,6 +183,7 @@ class MyPageController extends Controller
 //マイページテーブルに保存
         public function mypageup(Request $request)
         {
+            // $this->validate($request,MypageUp::$rules);
 
             $shop= Shop::find($request->shop_id);
             
@@ -194,12 +195,21 @@ class MyPageController extends Controller
 
             $mypageup->user_id = Auth::id();
             $mypageup->shop_id =$request->shop_id;
-            // dd($mypageup);
-           
+            
             $mypageup->save();
 
             $shops = Auth::user()->shops()->get();
 
+            return view('mypage.mypageup',['shops' =>$shops]);
+            
+        }
+        
+        public function mypageup_delete(Request $request)
+        {
+            $mypage= MypageUp::where("shop_id", $request->shop_id);
+            $mypage= $mypage->where("user_id", Auth::user()->id)->first();
+            $mypage->delete();
+            $shops = Auth::user()->shops()->get();
             return view('mypage.mypageup',['shops' =>$shops]);
             
         }
@@ -316,9 +326,10 @@ class MyPageController extends Controller
 // リクエスト一覧
         public function requestlist(Request $request)
         {
+            $shop = Shop::find($request->id);
             $shop_requests = new ShopRequest;
             $requests= $shop_requests::all();
-            
+           
             // dd($requests);
 
             $requests=$requests->sortByDesc('created_at');
@@ -338,19 +349,15 @@ class MyPageController extends Controller
             $requests=$requests->sortByDesc('created_at');
             
             return view ('mypage.requestlist',['requests' =>$requests]);
-
         }
-
 
 // 掲示板へのコメント送付画面にいく
         public function board(Request $request)
         { 
             $shop = Shop::find($request->id);
             
-            return view('mypage.evaluation',['shop' =>$shop]);
-            
+            return view('mypage.evaluation',['shop' =>$shop]);            
         }
-
 
 // 掲示板へコメントを保存する
         public function boardup(Request $request)
@@ -370,18 +377,14 @@ class MyPageController extends Controller
            
             $boards = $shop->boards()->get();
 
-
             $boards=$shop->boards->sortByDesc('created_at');
     
-            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
-        
+            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);        
         }
          
-
 // 掲示板画面
         public function boardlist(Request $request)
-        {
-         
+        {    
             $shop= Shop::find($request->id);
    
             $boards = new Board;
@@ -390,76 +393,73 @@ class MyPageController extends Controller
           
             $boards=$shop->boards->sortByDesc('created_at');
            
-            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
-            
+            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);          
         }
-
-        
+       
 // 掲示板のコメント編集送付画面へ
-    public function commentupdate(Request $request)
-    {
-        $boards = new Board;
-        $shop= Board::find($request->id);  
+        public function commentupdate(Request $request)
+        {
+            $boards = new Board;
+            $shop= Board::find($request->id);  
 
-        return view('mypage.evaluationup',['boards' =>$boards,'shop' =>$shop]);
-    }
-
+            return view('mypage.evaluationup',['boards' =>$boards,'shop' =>$shop]);
+        }
 
 // 掲示板のコメントの編集内容を上書き保存
      public function commentsave(Request $request)
-     {
-        $this->validate($request,Board::$rules);
-      
-        $board= Board::find($request->id);
-        $user = Auth::user();
-
-                // 投稿したユーザーか確認
-                    if($board->user_id !== $user->id)
-                    {
-                        $shop = Shop::find($board->shop_id);
-                        $boards = new Board;
-                        $boards = $shop->boards()->get();
-                        $boards=$shop->boards->sortByDesc('created_at');
-                        
-                        return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
-                    }
-        
-        $board->comment = $request->body;
-        $board->save();
-
-        $shop = Shop::find($board->shop_id);
-        $boards = new Board;
-        $boards = $shop->boards()->get();
-
-        $boards=$shop->boards->sortByDesc('created_at');
-           
-        return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
-              
-     }
-
-
-// 掲示板に投稿したコメントを削除する
-        public function commentdelete(Request $request)
         {
-            $board = new Board;   
-            $board = Board::find($request->id);
+            $this->validate($request,Board::$rules);
+        
+            $board= Board::find($request->id);
             $user = Auth::user();
-          
-            // 他の人のコメントは消せないようにチェック
-            if($board->user_id !== $user->id)
-            {
-                return redirect('mypage/show');
-            }
-            $board->delete();
+
+                    // 投稿したユーザーか確認
+                        if($board->user_id !== $user->id)
+                        {
+                            $shop = Shop::find($board->shop_id);
+                            $boards = new Board;
+                            $boards = $shop->boards()->get();
+                            $boards=$shop->boards->sortByDesc('created_at');
+                            
+                            return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
+                        }
+            
+            $board->comment = $request->body;
+            $board->save();
 
             $shop = Shop::find($board->shop_id);
             $boards = new Board;
             $boards = $shop->boards()->get();
-              
+
             $boards=$shop->boards->sortByDesc('created_at');
-               
+            
             return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
                 
+        }
+
+
+    // 掲示板に投稿したコメントを削除する
+         public function commentdelete(Request $request)
+         {
+                $board = new Board;   
+                $board = Board::find($request->id);
+                $user = Auth::user();
+            
+                    // 他の人のコメントは消せないようにチェック
+                    if($board->user_id !== $user->id)
+                    {
+                        return redirect('mypage/show');
+                    }
+                $board->delete();
+
+                $shop = Shop::find($board->shop_id);
+                $boards = new Board;
+                $boards = $shop->boards()->get();
+                
+                $boards=$shop->boards->sortByDesc('created_at');
+                
+                return view('mypage.board',['boards' =>$boards ,'shop' =>$shop ]);
+                    
         }
 
 //編集した内容の更新とDBへの保存
@@ -488,9 +488,7 @@ class MyPageController extends Controller
             // 該当するデータを上書きして保存する
             $shop->fill($shop_date)->save();
         
-            return view ('mypage.update',['shop' =>$shop]);
-        
+            return view ('mypage.update',['shop' =>$shop]);        
         }
-
 
 }

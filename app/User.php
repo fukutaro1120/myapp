@@ -12,6 +12,9 @@ class User extends Authenticatable
     public function shop_requests(){
         return $this->hasMany('App\Models\ShopRequest');
     }
+    public function mypageups(){
+        return $this->hasMany('App\Models\MypageUp');
+    }
     
 
     public function shops(){

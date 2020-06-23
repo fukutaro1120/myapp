@@ -60,7 +60,7 @@
                             <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item border-left">
                             <a class="nav-link pl-3" href="{{ route('mypage.create') }}">店の新規登録</a>
                         </li>
 
