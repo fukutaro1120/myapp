@@ -34,7 +34,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('edit', 'MyPageController@edit')->name('mypage.edit');
 
 // 全店：登録店舗削除
-    Route::post('delete', 'MyPageController@delete')->name('mypage.delete');
+    Route::post('checkdelete', 'MyPageController@delete')->name('mypage.checkdelete');
      
 // 登録店舗一覧と更新
     Route::get('check', 'MyPageController@check')->name('mypage.check');
@@ -51,6 +51,7 @@ Route::group(['prefix' => 'mypage','middleware'=>'auth'] ,function()
     Route::get('edit', 'MyPageController@up')->name('mypage.edit');
     Route::post('edit', 'MyPageController@mypageup')->name('mypage.mypageup');
     Route::post('delete', 'MyPageController@mypageup_delete')->name('mypage.mypageup_delete');
+    
     
 //  マイページへ登録している店一覧(画像あり)   
     Route::get('mypagelist', 'MyPageController@mypagelist')->name('mypage.mypagelist');

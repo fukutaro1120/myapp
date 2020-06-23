@@ -29,7 +29,7 @@
                 <a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> 
               </td>
               <td>
-                <form method="POST" action="{{ route('mypage.delete') . '?id=' . strval($shop->id ) }}" id="delete_{{ $shop->id}}" >
+                <form method="POST" action="{{ route('mypage.checkdelete') . '?id=' . strval($shop->id ) }}" id="delete_{{ $shop->id}}" >
                   @csrf
                 <a href="#" class="btn btn-danger" data-id="{{ $shop->id }}" onclick="deletePost(this);">削除</a>
                 </form>
