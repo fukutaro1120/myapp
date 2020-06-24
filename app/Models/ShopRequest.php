@@ -16,7 +16,7 @@ class ShopRequest extends Model
     public static $rules = array(
         'shop_name' => 'required',
         'address' => 'required',
-        'comment' => 'required',
+        'comment' => 'required|string|max:20',
     );
         
 }

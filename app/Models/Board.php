@@ -19,6 +19,6 @@ class Board extends Model
 
     public static $rules = array(
        
-        'body' => 'required',
+        'body' => 'required|string|max:20',
     );
 }

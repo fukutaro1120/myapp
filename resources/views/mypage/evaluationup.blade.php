@@ -36,7 +36,7 @@
                             <div class="col-md-12">
                               <div class="form-group">
                                 <textarea class="form-control" name="body" rows="6"></textarea>
-                                ※コメントは30字以内です
+                                ※コメントは20字以内です
                               </div>
                             </div>
                           </div>

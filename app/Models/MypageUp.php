@@ -21,7 +21,7 @@ class MypageUp extends Model
     public static $rules = array(
         'user_id' => 'required',
         'shop_id' =>'required|uinique:shops,id;',
-        'body' => 'required',
+        'body' => 'required|string|max:20',
         
     );
 }
