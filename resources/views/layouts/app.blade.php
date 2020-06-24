@@ -53,19 +53,19 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.mylistcheck') }}">マイページ登録店リスト</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.mylistcheck') }}">マイページリスト</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
+                            <a class="nav-link px-3" href="{{ route('mypage.request') }}">リクエスト</a>
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link pl-5" href="{{ route('mypage.create') }}">店の新規登録</a>
+                            <a class="nav-link pl-5" href="{{ route('mypage.create') }}">新規登録</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.check') }}">登録店の更新</a>
+                            <a class="nav-link pl-3" href="{{ route('mypage.check') }}">登録店更新</a>
                         </li>
 
 
