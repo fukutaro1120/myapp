@@ -34,7 +34,7 @@
                           <div class="row">
                             </div>
                               <div class="col-md-12 text-left pl-0 ">
-                                <h6 class="card-title"><{{ $shop->address }} </h6>
+                                <h6 class="card-title"><{{ $shop->address }} ></h6>
                               </div>
                         </div>
 
