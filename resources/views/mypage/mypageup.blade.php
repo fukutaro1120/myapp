@@ -12,7 +12,8 @@
             <div class="card col-md-3 shadow mb-5 mx-4  p-1 ">
               <div class="img_wrap">
                   <a href="{{ route('mypage.edit') . '?id=' . strval($shop->id) }}">
-                    <img src="{{ asset('storage/image/'.$shop->image_path) }}" class="img-fluid d-block w-100">
+                    <img src="{{ $shop->image_path }}" class="img-fluid d-block w-100">
+                    <!-- <img src=" asset('storage/image/'.$shop->image_path) " class="img-fluid d-block w-100"> -->
                   </a>
               </div>
 

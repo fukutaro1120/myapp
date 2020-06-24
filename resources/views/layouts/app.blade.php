@@ -32,7 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container ml-0">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/storage/img/musubi.jpg" width="50" height="40" alt="" loading="lazy">
+                <img src="/images/musubi.jpg" width="50" height="40" alt="" loading="lazy">
                     {{ config('app.name', 'Laravel') }}
                 </a>
 

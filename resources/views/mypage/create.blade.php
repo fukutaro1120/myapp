@@ -6,7 +6,7 @@
 <form action="{{ action('MyPageController@create') }}" method="post" enctype="multipart/form-data">
 @csrf
 
-<!-- エラー表示 -->
+<!-- エラー -->
 @if(count($errors) > 0)
     <ul>
       @foreach($errors->all() as $e )

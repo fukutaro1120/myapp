@@ -9,6 +9,7 @@ use App\Models\Shop;
 use App\Models\ShopRequest;
 use App\Models\MypageUp;
 use App\Models\Board;
+use Storage;
 use App\User;
 
 
@@ -58,9 +59,9 @@ class MyPageController extends Controller
         
     // 画像
         if(isset($form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $shop->image_path = basename($path);
-            // dd($shop->image_path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $shop->image_path = Storage::disk('s3')->url($path);
+            
         }else{
             $shop->image_path = null;
         }
@@ -68,9 +69,11 @@ class MyPageController extends Controller
     //  画像1
         if(isset($form['image1'])) 
         {
-            
-            $path = $request->file('image1')->store('public/image');
-            $shop->image_path1 = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image1'],'public');
+            $shop->image_path1 = Storage::disk('s3')->url($path);
+
+            // $path = $request->file('image1')->store('public/image');
+            // $shop->image_path1 = basename($path);
           
         }else{
             $shop->image_path1 = null;
@@ -79,8 +82,10 @@ class MyPageController extends Controller
     // 画像2
          if(isset($form['image2'])) {
                 
-            $path = $request->file('image2')->store('public/image');
-            $shop->image_path2 = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image2'],'public');
+            $shop->image_path2 = Storage::disk('s3')->url($path);
+            // $path = $request->file('image2')->store('public/image');
+            // $shop->image_path2 = basename($path);
          }else{
             $shop->image_path2 = null;
         }
@@ -88,8 +93,10 @@ class MyPageController extends Controller
     // 画像3
         if(isset($form['image3'])) {
                         
-            $path = $request->file('image3')->store('public/image');
-            $shop->image_path3 = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image3'],'public');
+            $shop->image_path3 = Storage::disk('s3')->url($path);
+            // $path = $request->file('image3')->store('public/image');
+            // $shop->image_path3 = basename($path);
         }else{
             $shop->image_path3 = null;
         }

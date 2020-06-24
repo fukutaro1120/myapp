@@ -43,7 +43,7 @@
     <div class="container py-3 mt-5 ">
       <div class="row">
         <div class="col-md-4">
-          <figure class="snip1340"><img src="/storage/img/noge.jpg" alt=""/>
+          <figure class="snip1340"><img src="/images/noge.jpg" alt=""/>
             <figcaption>
               <h2>店</h2>
               <p>People and stores</p>
@@ -53,7 +53,7 @@
         </div>
 
         <div class="col-md-4">
-          <figure class="snip1340 "><img src="/storage/img/kanpai.jpeg" alt=""/>
+          <figure class="snip1340 "><img src="/images/kanpai.jpeg" alt=""/>
             <figcaption>
               <h2>人</h2>
               <p>People and people</p>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="col-md-4">
-        <figure class="snip1340"><img src="/storage/img/sake.jpeg" alt=""/>
+        <figure class="snip1340"><img src="/images/sake.jpeg" alt=""/>
           <figcaption>
             <h2>酒</h2>
             <p>People and sake</p>

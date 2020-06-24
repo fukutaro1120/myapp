@@ -19,32 +19,40 @@
 
       <div class="col-md-3 ">
         <div class="img_wrap">
-          <a href="{{ asset('storage/image/'.$shop->image_path) }}" data-lightbox="group">
-            <img src="{{ asset('storage/image/'.$shop->image_path) }}" width="300">
+          <a href="{{ $shop->image_path }}" data-lightbox="group">
+            <img src="{{ $shop->image_path }}" width="300">
+          <!-- <a href=" asset('storage/image/'.$shop->image_path) " data-lightbox="group">
+            <img src=" asset('storage/image/'.$shop->image_path) " width="300"> -->
           </a>
         </div>
      </div>
 
      <div class="col-md-3 ">
         <div class="img_wrap">
-        <a href="{{ asset('storage/image/'.$shop->image_path1) }}" data-lightbox="group">
-          <img src="{{ asset('storage/image/'.$shop->image_path1) }}" width="300">
+        <a href="{{ $shop->image_path1 }}" data-lightbox="group">
+          <img src="{{ $shop->image_path1 }}" width="300">
+        <!-- <a href=" asset('storage/image/'.$shop->image_path1) " data-lightbox="group">
+          <img src=" asset('storage/image/'.$shop->image_path1) " width="300"> -->
         </a>
         </div>
      </div>
 
     <div class="col-md-3 ">
       <div class="img_wrap">
-        <a href="{{ asset('storage/image/'.$shop->image_path2) }}" data-lightbox="group">
-          <img src="{{ asset('storage/image/'.$shop->image_path2) }}" width="300">
+        <a href="{{ $shop->image_path2 }}" data-lightbox="group">
+          <img src="{{ $shop->image_path2 }}" width="300">
+        <!-- <a href=" asset('storage/image/'.$shop->image_path2) " data-lightbox="group">
+          <img src=" asset('storage/image/'.$shop->image_path2) " width="300"> -->
         </a>
       </div>
     </div>
 
     <div class="col-md-3 ">
       <div class="img_wrap">
-        <a href="{{ asset('storage/image/'.$shop->image_path3) }}" data-lightbox="group">
-          <img src="{{ asset('storage/image/'.$shop->image_path3) }}" width="300">
+        <a href="{{ $shop->image_path3 }}" data-lightbox="group">
+          <img src="{{ $shop->image_path3 }}" width="300">
+        <!-- <a href=" asset('storage/image/'.$shop->image_path3) " data-lightbox="group">
+          <img src=" asset('storage/image/'.$shop->image_path3) " width="300"> -->
         </a>
       </div> 
     </div> 
@@ -59,7 +67,8 @@
 
     <section class="alternate-layout alternate-layout--reverse">
         <div class="alternate-layout__img">
-          <img src="{{ asset('storage/image/'.$shop->image_path) }}" class=" d-block w-80" alt="...">
+          <img src="{{ $shop->image_path }}" class=" d-block w-80" alt="...">
+          <!-- <img src=" asset('storage/image/'.$shop->image_path) " class=" d-block w-80" alt="..."> -->
         </div>
         <div class="alternate-layout__detail">
               <h2 class="alternate-layout__heading"> 『{{ $shop->shop_name}}』</h2>
@@ -70,7 +79,8 @@
 
     <section class="alternate-layout">
         <div class="alternate-layout__img"> 
-          <img src="{{ asset('storage/image/'.$shop->image_path1) }}" class=" d-block w-80" alt="...">
+          <img src="{{ $shop->image_path1 }}" class=" d-block w-80" alt="...">
+          <!-- <img src=" asset('storage/image/'.$shop->image_path1) " class=" d-block w-80" alt="..."> -->
         </div>
         <div class="alternate-layout__detail">
               <h5>・ジャンル：{{ $shop->category}}</h5>
