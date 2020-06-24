@@ -21,28 +21,22 @@
         <div class="contents">
           <div class="row">
             <div class="col-1"></div>
-            <div class="col-md-10 text-center">
-                <div class="content">
-                    <h1 class="fadein pb-2">飲musubiとは...</h1>
-                    <h4 class="fadein py-2">1杯目で店を楽しむ。</h4>
-                    <h4 class="fadein py-2">2杯目で人を楽しむ。</h4>
-                    <h4 class="fadein py-2">3杯目で酒を楽しむ。</h4>
-                    <h6 class="fadein py-2">そんな時間を楽しみたい、人と店と酒を「結ぶ」アプリです。</h6>
-                </div>
-            <!-- </div>
-                <div class="col-md-5 text-center">
-                  <figure><img src="/storage/img/con.jpg" alt=""></figure>
-                </div> 
-                <div class="col-1"></div>-->
-            </div> 
+              <div class="col-md-10 text-center">
+                  <div class="content">
+                      <h1 class="fadein pb-2">飲musubiとは...</h1>
+                      <h4 class="fadein py-2">1杯目で店を楽しむ。</h4>
+                      <h4 class="fadein py-2">2杯目で人を楽しむ。</h4>
+                      <h4 class="fadein py-2">3杯目で酒を楽しむ。</h4>
+                      <h6 class="fadein py-2">そんな時間を楽しみたい、人と店と酒を「結ぶ」アプリです。</h6>
+                  </div>
+              </div> 
           </div>
-          </div>
+        </div>
       </div> 
     </section>              
   </div> 
 </div> 
 <!-- サイト説明ここまで -->
-
 
 <!-- エフェクト画像 -->
 <div class="service fadein  bg-white">
@@ -81,7 +75,6 @@
 
 <!-- エフェクトここまで -->
 
-
     <!-- Opional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.slim.min.js"></script>
@@ -93,6 +86,5 @@
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
     <!-- 以下スクロール表示用 -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
 
 @endsection

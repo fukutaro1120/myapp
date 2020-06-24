@@ -57,11 +57,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
+                            <a class="nav-link px-3" href="{{ route('mypage.request') }}">リクエストフォーム</a>
                         </li>
 
-                        <li class="nav-item border-left">
-                            <a class="nav-link pl-3" href="{{ route('mypage.create') }}">店の新規登録</a>
+                        <li class="nav-item ">
+                            <a class="nav-link pl-5" href="{{ route('mypage.create') }}">店の新規登録</a>
                         </li>
 
                         <li class="nav-item">

@@ -12,6 +12,7 @@
 @endif
                       
 <br>
+
 <div class="container mt-5">
     <div class="row text-center">
         <h1>『{{$shop->shop_name}}の掲示板』</h1>
@@ -26,7 +27,6 @@
             <a href=" {{ route('mypage.evaluation') . '?id=' . strval($shop->id) }} "> 
                 <button type="button" class="btn btn-primary">コメントを送る</button>
             </a>
-        <!-- <div class="col-1"></div> -->
         </div>
     </div>
 </div>
@@ -69,6 +69,7 @@
      </div>
   </div>
   <hr>
+
   <p class="mt-2 mb-5 mr-5 pr-5 text-right">※他ユーザーのコメントは「編集・削除」出来ません！</p>
 
   <link href="{{ asset('css/font.css') }}" rel="stylesheet">
@@ -85,8 +86,4 @@
     </script>
     <!-- ここまで -->
        
-  
-
-
-
 @endsection

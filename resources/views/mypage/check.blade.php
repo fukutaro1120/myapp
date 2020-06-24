@@ -6,17 +6,17 @@
 
   <div class="container mt-5 px-0 border">
     <table class="table table-hover">
-      <thead class="thead-light">
-         <tr>
-              <th scope="col">No</th>
-              <th scope="col">店舗名</th>
-              <th scope="col">住所</th>
-              <th scope="col">ジャンル</th>
-              <th scope="col">おすすめ</th>
-              <th scope="col">編集</th>
-              <th scope="col">削除</th>
-          </tr>
-      </thead>
+        <thead class="thead-light">
+            <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">店舗名</th>
+                  <th scope="col">住所</th>
+                  <th scope="col">ジャンル</th>
+                  <th scope="col">おすすめ</th>
+                  <th scope="col">編集</th>
+                  <th scope="col">削除</th>
+              </tr>
+        </thead>
     <tbody>
       @foreach($shops as $shop)
          <tr>
@@ -28,17 +28,17 @@
               <td>
                 <a href="{{ route('mypage.update') . '?id=' . strval($shop->id) }}">編集</a> 
               </td>
-              <td>
-                <form method="POST" action="{{ route('mypage.checkdelete') . '?id=' . strval($shop->id ) }}" id="delete_{{ $shop->id}}" >
-                  @csrf
-                <a href="#" class="btn btn-danger" data-id="{{ $shop->id }}" onclick="deletePost(this);">削除</a>
-                </form>
-              </td>
+                <td>
+                  <form method="POST" action="{{ route('mypage.checkdelete') . '?id=' . strval($shop->id ) }}" id="delete_{{ $shop->id}}" >
+                    @csrf
+                  <a href="#" class="btn btn-danger" data-id="{{ $shop->id }}" onclick="deletePost(this);">削除</a>
+                  </form>
+                </td>
          </tr>
       @endforeach   
     </tbody>
   </table>
-  </div>
+ </div>
   
 
     <!-- Opional JavaScript -->

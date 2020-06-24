@@ -31,7 +31,6 @@
                       <div class="row">
                         <label for="exampleFormControlSelect1">■お店の掲示板へコメント</label>  
                             <div class="col-md-12 text-left">
-                              <!-- <label for="exampleFormControlTextarea1"></label> -->
                             </div>
                             <div class="col-md-12">
                               <div class="form-group">
@@ -63,7 +62,6 @@
   </div>
 </form>
          
-
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
 
 @endsection
