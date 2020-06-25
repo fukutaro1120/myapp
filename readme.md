@@ -1,6 +1,6 @@
 
 # アプリ名: <a href="https://nomusubi.herokuapp.com"><img src="image/musubi.jpg" width="50" height="40" alt="" loading="lazy">飲musubi</a>
- 飲musubとは、  
+ 飲musubiとは、  
  「人と店」    
  「人と人」    
  「人と酒」  
