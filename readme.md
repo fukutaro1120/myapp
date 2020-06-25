@@ -1,5 +1,5 @@
 
-# アプリ名: <a href="https://nomusubi.herokuapp.com">飲musubi</a>
+# アプリ名:  <img src="/images/musubi.jpg" width="50" height="40" alt="" loading="lazy"><a href="https://nomusubi.herokuapp.com">飲musubi</a>
  飲musubとは、  
  「人と店」    
  「人と人」    
@@ -11,7 +11,7 @@
   
 
 
-# 使用言語等
+# 使用言語
 PHP/Laravel/SCSS/Javascripit  
 
 
