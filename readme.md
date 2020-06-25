@@ -1,10 +1,10 @@
 
-# Name:飲musubi(https://nomusubi.herokuapp.com)
+# Name:<a  href="https://nomusubi.herokuapp.com">飲musubi</a>
  飲musubとは、「人」、「店」、「酒」をキーに、「好みの店」、「共通の好みの人」を結ぶアプリケーションです。
 
 # DEMO
-![トップ画面](/top_image.png)
-![登録店一覧画面](/shop_image.png)
+![トップ画面](top_image.png)
+![登録店一覧画面](shop_image.png)
  
 # Features
  
