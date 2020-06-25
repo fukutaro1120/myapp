@@ -24,14 +24,15 @@ PHP/Laravel/SCSS/Javascripit
 
 
 
-# 画面イメージ
-***トップ画面です***  
+# 画面イメージ  
+
+***<トップ画面です>***  
 ![トップ画面]( image/top_image.png "top")  
 
-***登録店一覧画面です***  
+***<登録店一覧画面です>***  
 ![登録店一覧画面]( image/shop_image.png "shop" )  
 
-***登録店詳細画面です***
+***<登録店詳細画面です>***
 ![登録店詳細画面]( image/shop_detail.png "shop" )  
 
  
