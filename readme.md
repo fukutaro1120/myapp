@@ -1,10 +1,12 @@
 
 # アプリ名:<a  href="https://nomusubi.herokuapp.com">飲musubi</a>
- 飲musubとは、「人と店」、「人と人」、「人と酒」をキーワードに、好みの店や酒、共通の好みの人を結ぶアプリケーションです。
+ 飲musubとは、「人と店」、「人と人」、「人と酒」をキーワードに、好みの店や酒、共通の好みの人を結ぶアプリケーションです。  
+
 
 
 # 使用言語等
-PHP/Laravel/SCSS/Javascripit
+PHP/Laravel/SCSS/Javascripit  
+
 
 
 # 実装機能一覧
@@ -16,19 +18,22 @@ PHP/Laravel/SCSS/Javascripit
   * 管理者のみの機能  
     - 店の新規登録  
     - 店の更新、削除  
-    - リクエストリスト閲覧
+    - リクエストリスト閲覧  
+
 
 
 # 画面イメージ
-***トップ画面です***
-![トップ画面]( image/top_image.png "top")
+***トップ画面です***  
+![トップ画面]( image/top_image.png "top")  
 
-***登録店一覧画面です***
-![登録店一覧画面]( image/shop_image.png "shop" )
+
+***登録店一覧画面です***  
+![登録店一覧画面]( image/shop_image.png "shop" )  
+
  
 
 # 使用方法
-
+会員登録後、
 
 
  
