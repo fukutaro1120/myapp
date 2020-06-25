@@ -1,5 +1,5 @@
 
-# アプリ名:<a  href="https://nomusubi.herokuapp.com">飲musubi</a>
+# アプリ名: <a href="https://nomusubi.herokuapp.com">飲musubi</a>
  飲musubとは、  
  「人と店」    
  「人と人」    
@@ -7,10 +7,12 @@
  をキーワードに、好みの店や酒、共通の好みの人を結ぶアプリケーションです。  
 
 
+# 制作背景
+  
+
 
 # 使用言語等
 PHP/Laravel/SCSS/Javascripit  
-
 
 
 # 実装機能一覧
@@ -22,7 +24,6 @@ PHP/Laravel/SCSS/Javascripit
 - 店の新規登録(管理者のみ)      
 - 店の更新、削除(管理者のみ)      
 - リクエストリスト閲覧(管理者のみ)        
-
 
 
 # 画面イメージ  
@@ -67,23 +68,7 @@ PHP/Laravel/SCSS/Javascripit
    ユーザーから送られてきたリクエストの一覧です。
    リクエストのお店を新規登録画面から登録できます。
 
-# Note
+# 今後、実装していきたい機能
  
-注意点などがあれば書く
- 
-# Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+
+
