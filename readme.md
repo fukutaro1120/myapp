@@ -1,5 +1,5 @@
 
-# アプリ名:  <img src="/images/musubi.jpg" width="50" height="40" alt="" loading="lazy"><a href="https://nomusubi.herokuapp.com">飲musubi</a>
+# アプリ名: <img src="image/musubi.jpg" width="50" height="40" alt="" loading="lazy"><a href="https://nomusubi.herokuapp.com">飲musubi</a>
  飲musubとは、  
  「人と店」    
  「人と人」    
