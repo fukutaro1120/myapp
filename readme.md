@@ -1,6 +1,6 @@
 
 # アプリ名:<a  href="https://nomusubi.herokuapp.com">飲musubi</a>
- 飲musubとは、「人」、「店」、「酒」をキーに、「好みの店」、「共通の好みの人」を結ぶアプリケーションです。
+ 飲musubとは、「人と店」、「人と人」、「人と酒」をキーワードに、好みの店や酒、共通の好みの人を結ぶアプリケーションです。
 
 # 使用言語等
 PHP/Laravel/SCSS/Javascripit
@@ -17,37 +17,13 @@ PHP/Laravel/SCSS/Javascripit
     - リクエストリスト閲覧
 
 # DEMO
-![トップ画面](/top_image.png "top")
-![登録店一覧画面](/shop_image.png "shop" )
+![トップ画面]( /top_image.png "top")
+![登録店一覧画面]( /shop_image.png "shop" )
  
-# Features
- 
-"hoge"のセールスポイントや差別化などを説明する
- 
-# Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+# 使用方法
+
+
+
  
 # Note
  
