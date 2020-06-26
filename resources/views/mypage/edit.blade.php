@@ -20,7 +20,7 @@
       <div class="col-md-3 ">
         <div class="img_wrap">
           <a href="{{ $shop->image_path }}" data-lightbox="group">
-            <img src="{{ $shop->image_path }}" width="300">
+            <img src="{{ $shop->image_path }}" width="100%">
           <!-- <a href=" asset('storage/image/'.$shop->image_path) " data-lightbox="group">
             <img src=" asset('storage/image/'.$shop->image_path) " width="300"> -->
           </a>
@@ -30,7 +30,7 @@
      <div class="col-md-3 ">
         <div class="img_wrap">
         <a href="{{ $shop->image_path1 }}" data-lightbox="group">
-          <img src="{{ $shop->image_path1 }}" width="300">
+          <img src="{{ $shop->image_path1 }}" width="100%">
         <!-- <a href=" asset('storage/image/'.$shop->image_path1) " data-lightbox="group">
           <img src=" asset('storage/image/'.$shop->image_path1) " width="300"> -->
         </a>
@@ -40,7 +40,7 @@
     <div class="col-md-3 ">
       <div class="img_wrap">
         <a href="{{ $shop->image_path2 }}" data-lightbox="group">
-          <img src="{{ $shop->image_path2 }}" width="300">
+          <img src="{{ $shop->image_path2 }}" width="100%">
         <!-- <a href=" asset('storage/image/'.$shop->image_path2) " data-lightbox="group">
           <img src=" asset('storage/image/'.$shop->image_path2) " width="300"> -->
         </a>
@@ -50,7 +50,7 @@
     <div class="col-md-3 ">
       <div class="img_wrap">
         <a href="{{ $shop->image_path3 }}" data-lightbox="group">
-          <img src="{{ $shop->image_path3 }}" width="300">
+          <img src="{{ $shop->image_path3 }}" width="100%">
         <!-- <a href=" asset('storage/image/'.$shop->image_path3) " data-lightbox="group">
           <img src=" asset('storage/image/'.$shop->image_path3) " width="300"> -->
         </a>
