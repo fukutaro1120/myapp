@@ -62,7 +62,12 @@
 <!-- 拡大画像ここまで -->
 
 <!-- ここからメモ書き風 -->
-<div class="container1 my-3 shadow p-5 bg-white border">
+<div class="container">
+  <div class="row">
+    
+    
+    <div class="container1 my-3 shadow p-5 bg-white border">
+      <div class="col-md-12">
   <h3>飲musubiメモ</h3>
 
     <section class="alternate-layout alternate-layout--reverse">
@@ -87,6 +92,10 @@
               <h5>・おすすめ：{{ $shop->recommend}}</h5>
         </div>
     </section>
+</div>
+
+</div>
+</div>
 </div>
 <!-- ここまでメモ -->
 
